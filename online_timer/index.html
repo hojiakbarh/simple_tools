@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Timer – Simple Countdown Timer</title>
+  <meta name="description" content="Free online timer. Start a 5, 10 or 25 minute countdown instantly. No login required.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- AdSense (keyin ulaymiz) -->
+  <!--
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX"
+    crossorigin="anonymous"></script>
+  -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Online Timer</h1>
+    <p class="subtitle">
+      Simple countdown timer. One click to start.
+    </p>
+
+    <div class="timer-display" id="timerDisplay">00:00</div>
+
+    <div class="custom-time">
+  <input type="number" id="minutesInput" placeholder="Minutes" min="1">
+  <button id="setBtn">Set</button>
+</div>
+
+
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+    </div>
+
+    <div class="presets">
+      <button data-minutes="5">5 min</button>
+      <button data-minutes="10">10 min</button>
+      <button data-minutes="25">25 min</button>
+    </div>
+
+    <!-- AdSense joyi (kontentdan keyin) -->
+    <!--
+    <ins class="adsbygoogle"
+         style="display:block;margin-top:24px"
+         data-ad-client="ca-pub-XXXX"
+         data-ad-slot="XXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    -->
+
+    <footer>
+      <p>
+        Fast, minimal and free online timer.
+        Works on desktop and mobile.
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

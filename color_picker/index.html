@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Picker – HEX & RGB Color Tool</title>
+  <meta name="description" content="Free online color picker. Pick colors and copy HEX or RGB values instantly. No login required.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- AdSense (keyin ulaymiz) -->
+  <!--
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX"
+    crossorigin="anonymous"></script>
+  -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Color Picker</h1>
+    <p class="subtitle">
+      Pick a color and copy HEX or RGB values.
+    </p>
+
+    <div class="picker">
+      <input type="color" id="colorInput" value="#2563eb">
+      <div class="preview" id="preview"></div>
+    </div>
+
+    <div class="values">
+      <div class="value-box">
+        <span>HEX</span>
+        <input type="text" id="hexValue" readonly>
+        <button data-copy="hex">Copy</button>
+      </div>
+
+      <div class="value-box">
+        <span>RGB</span>
+        <input type="text" id="rgbValue" readonly>
+        <button data-copy="rgb">Copy</button>
+      </div>
+    </div>
+
+    <!-- AdSense joyi -->
+    <!--
+    <ins class="adsbygoogle"
+         style="display:block;margin-top:24px"
+         data-ad-client="ca-pub-XXXX"
+         data-ad-slot="XXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    -->
+
+    <footer>
+      <p>
+        Simple, fast and free online color picker.
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
