@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unit Converter – Simple Tools</title>
+  <meta name="description" content="Convert units instantly. Length, weight, and temperature converter with simple and fast calculations." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>Unit Converter</h1>
+    <p class="subtitle">Convert length, weight, and temperature easily</p>
+
+    <!-- AdSense Top Banner -->
+    <div class="ad ad-top">
+      <!-- AdSense code will be placed here -->
+    </div>
+
+    <div class="converter">
+      <select id="type" onchange="updateUnits()">
+        <option value="length">Length</option>
+        <option value="weight">Weight</option>
+        <option value="temperature">Temperature</option>
+      </select>
+
+      <input type="number" id="value" placeholder="Enter value" />
+
+      <div class="row">
+        <select id="from"></select>
+        <span>to</span>
+        <select id="to"></select>
+      </div>
+
+      <button onclick="convert()">Convert</button>
+
+      <div id="result" class="result"></div>
+
+      <!-- AdSense Content Ad -->
+      <div class="ad ad-content">
+        <!-- AdSense code will be placed here -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© Simple Tools</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

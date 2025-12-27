@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QR Code Generator – Simple Tools</title>
+  <meta name="description" content="Generate and download QR codes instantly. Simple, fast and free QR code generator." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="card">
+    <h1>QR Code Generator</h1>
+    <p class="subtitle">Create & download QR codes instantly</p>
+
+    <!-- AdSense Top -->
+    <div class="ad"></div>
+
+    <input
+      type="text"
+      id="text"
+      placeholder="Enter text or URL"
+      autocomplete="off"
+    />
+
+    <button id="generateBtn">Generate QR Code</button>
+    <button id="downloadBtn" disabled>Download QR Code</button>
+
+    <div id="qr-wrapper">
+      <div id="qr"></div>
+    </div>
+
+    <!-- AdSense Bottom -->
+    <div class="ad"></div>
+  </main>
+
+  <footer>© Simple Tools</footer>
+
+  <!-- QR library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
