@@ -6,30 +6,16 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/online_timer/</loc>
-    <priority>0.9</priority>
-  </url>
+  <url><loc>https://simple-tools-3nn.pages.dev/online_timer/</loc><priority>0.9</priority></url>
+  <url><loc>https://simple-tools-3nn.pages.dev/word_counter/</loc><priority>0.9</priority></url>
+  <url><loc>https://simple-tools-3nn.pages.dev/random_number/</loc><priority>0.8</priority></url>
+  <url><loc>https://simple-tools-3nn.pages.dev/bmi_calculator/</loc><priority>0.8</priority></url>
+  <url><loc>https://simple-tools-3nn.pages.dev/color_picker/</loc><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/word_counter/</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/random_number/</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/bmi_calculator/</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/color_picker/</loc>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://simple-tools-3nn.pages.dev/password_generator/</loc><priority>0.7</priority></url>
+  <url><loc>https://simple-tools-3nn.pages.dev/percentage_calculator/</loc><priority>0.7</priority></url>
+  <url><loc>https://simple-tools-3nn.pages.dev/qr_code_generator/</loc><priority>0.7</priority></url>
+  <url><loc>https://simple-tools-3nn.pages.dev/text_case_converter/</loc><priority>0.7</priority></url>
+  <url><loc>https://simple-tools-3nn.pages.dev/unit_converter/</loc><priority>0.7</priority></url>
 
 </urlset>
-
