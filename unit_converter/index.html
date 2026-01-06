@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Unit Converter – Simple Tools</title>
-  <meta name="description" content="Convert units instantly. Length, weight, and temperature converter with simple and fast calculations." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Unit Converter – Free Online Unit Conversion Tool</title>
+
+  <meta name="description"
+        content="Free unit converter to convert length, weight, and temperature units instantly. Simple, fast, and accurate." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://simple-tools-3nn.pages.dev/unit_converter/" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main class="container">
-    <h1>Unit Converter</h1>
-    <p class="subtitle">Convert length, weight, and temperature easily</p>
+<main class="container">
+  <h1>Unit Converter</h1>
+  <p class="subtitle">Convert common units easily</p>
 
-    <!-- AdSense Top Banner -->
-    <div class="ad ad-top">
-      <!-- AdSense code will be placed here -->
+  <!-- TOOL -->
+  <div class="converter">
+
+    <select id="category">
+      <option value="length">Length</option>
+      <option value="weight">Weight</option>
+      <option value="temperature">Temperature</option>
+    </select>
+
+    <input type="number" id="inputValue" placeholder="Enter value">
+
+    <div class="selects">
+      <select id="fromUnit"></select>
+      <select id="toUnit"></select>
     </div>
 
-    <div class="converter">
-      <select id="type" onchange="updateUnits()">
-        <option value="length">Length</option>
-        <option value="weight">Weight</option>
-        <option value="temperature">Temperature</option>
-      </select>
+    <button id="convertBtn">Convert</button>
 
-      <input type="number" id="value" placeholder="Enter value" />
+    <p class="result" id="result">Result: –</p>
+  </div>
 
-      <div class="row">
-        <select id="from"></select>
-        <span>to</span>
-        <select id="to"></select>
-      </div>
+  <!-- SEO TEXT -->
+  <section class="seo-text">
+    <h2>Free Online Unit Converter</h2>
 
-      <button onclick="convert()">Convert</button>
+    <p>
+      This free unit converter allows you to convert common units such as length,
+      weight, and temperature quickly and accurately.
+    </p>
 
-      <div id="result" class="result"></div>
+    <p>
+      Select a category, enter a value, choose units, and get the result instantly.
+      The tool works directly in your browser without downloads or registration.
+    </p>
 
-      <!-- AdSense Content Ad -->
-      <div class="ad ad-content">
-        <!-- AdSense code will be placed here -->
-      </div>
-    </div>
-  </main>
+    <h3>Supported Conversions</h3>
+    <ul>
+      <li>Length: meters, kilometers, miles</li>
+      <li>Weight: grams, kilograms, pounds</li>
+      <li>Temperature: Celsius, Fahrenheit</li>
+    </ul>
+
+    <p>
+      This unit converter is useful for students, travelers, engineers,
+      and everyday calculations.
+    </p>
+  </section>
 
   <footer>
-    <p>© Simple Tools</p>
+    <p><a href="/">← Back to Home</a></p>
   </footer>
+</main>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

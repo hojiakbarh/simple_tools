@@ -1,55 +1,77 @@
+const categoryEl = document.getElementById("category");
+const fromUnitEl = document.getElementById("fromUnit");
+const toUnitEl = document.getElementById("toUnit");
+const inputValueEl = document.getElementById("inputValue");
+const resultEl = document.getElementById("result");
+const convertBtn = document.getElementById("convertBtn");
+
 const units = {
-  length: ["cm", "m", "km"],
-  weight: ["g", "kg"],
-  temperature: ["C", "F"]
+  length: ["meter", "kilometer", "mile"],
+  weight: ["gram", "kilogram", "pound"],
+  temperature: ["celsius", "fahrenheit"]
 };
 
-function updateUnits() {
-  const type = document.getElementById("type").value;
-  const from = document.getElementById("from");
-  const to = document.getElementById("to");
+function populateUnits() {
+  const category = categoryEl.value;
+  fromUnitEl.innerHTML = "";
+  toUnitEl.innerHTML = "";
 
-  from.innerHTML = "";
-  to.innerHTML = "";
+  units[category].forEach(unit => {
+    const option1 = document.createElement("option");
+    option1.value = unit;
+    option1.textContent = unit;
+    fromUnitEl.appendChild(option1);
 
-  units[type].forEach(u => {
-    from.add(new Option(u, u));
-    to.add(new Option(u, u));
+    const option2 = document.createElement("option");
+    option2.value = unit;
+    option2.textContent = unit;
+    toUnitEl.appendChild(option2);
   });
 }
 
 function convert() {
-  const type = document.getElementById("type").value;
-  const value = parseFloat(document.getElementById("value").value);
-  const from = document.getElementById("from").value;
-  const to = document.getElementById("to").value;
-  const result = document.getElementById("result");
+  const value = parseFloat(inputValueEl.value);
+  if (isNaN(value)) return;
 
-  if (isNaN(value)) {
-    result.textContent = "Please enter a value";
-    return;
+  const from = fromUnitEl.value;
+  const to = toUnitEl.value;
+  const category = categoryEl.value;
+
+  let result = value;
+
+  if (category === "length") {
+    const meters = from === "meter" ? value :
+      from === "kilometer" ? value * 1000 :
+      value * 1609.34;
+
+    result = to === "meter" ? meters :
+      to === "kilometer" ? meters / 1000 :
+      meters / 1609.34;
   }
 
-  let output = value;
+  if (category === "weight") {
+    const grams = from === "gram" ? value :
+      from === "kilogram" ? value * 1000 :
+      value * 453.592;
 
-  if (type === "length") {
-    if (from === "cm") output = value / 100;
-    if (from === "km") output = value * 1000;
-    if (to === "cm") output = output * 100;
-    if (to === "km") output = output / 1000;
+    result = to === "gram" ? grams :
+      to === "kilogram" ? grams / 1000 :
+      grams / 453.592;
   }
 
-  if (type === "weight") {
-    if (from === "g") output = value / 1000;
-    if (to === "g") output = output * 1000;
+  if (category === "temperature") {
+    if (from === to) result = value;
+    else if (from === "celsius")
+      result = value * 9 / 5 + 32;
+    else
+      result = (value - 32) * 5 / 9;
   }
 
-  if (type === "temperature") {
-    if (from === "C" && to === "F") output = value * 9/5 + 32;
-    if (from === "F" && to === "C") output = (value - 32) * 5/9;
-  }
-
-  result.textContent = `${value} ${from} = ${output.toFixed(2)} ${to}`;
+  resultEl.textContent = `Result: ${result.toFixed(2)}`;
 }
 
-updateUnits();
+categoryEl.addEventListener("change", populateUnits);
+convertBtn.addEventListener("click", convert);
+
+// INIT
+populateUnits();
