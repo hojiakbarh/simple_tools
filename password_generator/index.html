@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Password Generator – Simple Tools</title>
-  <meta name="description" content="Generate strong, secure passwords instantly. Choose length and character options with this simple password generator." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Password Generator – Free Secure Password Generator</title>
+
+  <meta name="description"
+        content="Free password generator to create strong and secure passwords instantly. Customize length and character types easily." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://simple-tools-3nn.pages.dev/password_generator/" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main class="card">
-    <h1>Password Generator</h1>
-    <p class="subtitle">Create strong passwords instantly</p>
+<main class="container">
+  <h1>Password Generator</h1>
+  <p class="subtitle">Create strong and secure passwords</p>
 
-    <!-- AdSense Top -->
-    <div class="ad"></div>
-
-    <div class="output">
-      <input type="text" id="password" readonly placeholder="Your password will appear here" />
-      <button id="copyBtn" title="Copy password">Copy</button>
+  <!-- TOOL -->
+  <div class="generator">
+    <div class="field">
+      <label for="length">Password length</label>
+      <input type="number" id="length" min="4" max="32" value="12">
     </div>
 
     <div class="options">
-      <label>
-        Length
-        <input type="range" id="length" min="6" max="32" value="12" />
-        <span id="lengthValue">12</span>
-      </label>
-
-      <label><input type="checkbox" id="uppercase" checked /> Uppercase (A-Z)</label>
-      <label><input type="checkbox" id="lowercase" checked /> Lowercase (a-z)</label>
-      <label><input type="checkbox" id="numbers" checked /> Numbers (0-9)</label>
-      <label><input type="checkbox" id="symbols" /> Symbols (!@#$)</label>
+      <label><input type="checkbox" id="uppercase" checked> Uppercase letters</label>
+      <label><input type="checkbox" id="lowercase" checked> Lowercase letters</label>
+      <label><input type="checkbox" id="numbers" checked> Numbers</label>
+      <label><input type="checkbox" id="symbols"> Symbols</label>
     </div>
 
     <button id="generateBtn">Generate Password</button>
 
-    <!-- AdSense Bottom -->
-    <div class="ad"></div>
-  </main>
+    <div class="result">
+      <input type="text" id="passwordOutput" readonly>
+      <button id="copyBtn" class="secondary">Copy</button>
+    </div>
+  </div>
 
-  <footer>© Simple Tools</footer>
+  <!-- SEO TEXT -->
+  <section class="seo-text">
+    <h2>Free Online Password Generator</h2>
 
-  <script src="script.js"></script>
+    <p>
+      This free password generator helps you create strong and secure passwords
+      to protect your online accounts. You can customize the password length
+      and choose which character types to include.
+    </p>
+
+    <p>
+      Strong passwords are essential for online security.
+      This tool generates random passwords instantly without storing any data.
+    </p>
+
+    <h3>Why Use This Password Generator?</h3>
+    <ul>
+      <li>Generate strong and random passwords</li>
+      <li>Custom length and character options</li>
+      <li>No registration required</li>
+      <li>Works entirely in your browser</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><a href="/">← Back to Home</a></p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
