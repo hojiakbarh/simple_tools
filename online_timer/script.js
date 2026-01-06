@@ -1,7 +1,6 @@
 const minutesInput = document.getElementById("minutesInput");
 const setBtn = document.getElementById("setBtn");
 
-
 const display = document.getElementById("timerDisplay");
 const startBtn = document.getElementById("startBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -50,20 +49,16 @@ presetButtons.forEach(btn => {
   });
 });
 
-updateDisplay();
-
 setBtn.addEventListener("click", () => {
   const minutes = parseInt(minutesInput.value);
-
   if (isNaN(minutes) || minutes <= 0) {
     alert("Please enter a valid number of minutes");
     return;
   }
-
   totalSeconds = minutes * 60;
   updateDisplay();
-
   clearInterval(timerInterval);
   timerInterval = null;
 });
 
+updateDisplay();

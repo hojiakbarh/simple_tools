@@ -35,6 +35,26 @@ h1 {
   color: #2563eb;
 }
 
+.custom-time {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.custom-time input {
+  width: 110px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.custom-time button {
+  background: #16a34a;
+  color: #fff;
+}
+
 .controls {
   display: flex;
   justify-content: center;
@@ -70,27 +90,28 @@ button.secondary {
   border: 1px solid #ddd;
 }
 
+.seo {
+  text-align: left;
+  margin-top: 24px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.seo h2, .seo h3 {
+  margin-bottom: 10px;
+}
+
+.seo p {
+  margin-bottom: 12px;
+}
+
+.seo ul {
+  padding-left: 18px;
+}
+
 footer {
   margin-top: 28px;
   font-size: 0.9rem;
   color: #666;
-}
-
-.custom-time {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.custom-time input {
-  width: 110px;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-.custom-time button {
-  background: #16a34a;
 }

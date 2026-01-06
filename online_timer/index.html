@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Online Timer – Simple Countdown Timer</title>
-  <meta name="description" content="Free online timer. Start a 5, 10 or 25 minute countdown instantly. No login required.">
+
+  <meta name="description"
+        content="Free online timer with presets (5, 10, 25 minutes) and custom time. Start, reset, and track time instantly. No login required." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- AdSense (keyin ulaymiz) -->
+  <link rel="canonical" href="https://simple-tools-3nn.pages.dev/online_timer/" />
+
+  <!-- AdSense (keyin ulaysiz) -->
   <!--
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX"
@@ -19,17 +23,15 @@
 
   <main class="container">
     <h1>Online Timer</h1>
-    <p class="subtitle">
-      Simple countdown timer. One click to start.
-    </p>
+    <p class="subtitle">Simple countdown timer. One click to start.</p>
 
+    <!-- TOOL -->
     <div class="timer-display" id="timerDisplay">00:00</div>
 
     <div class="custom-time">
-  <input type="number" id="minutesInput" placeholder="Minutes" min="1">
-  <button id="setBtn">Set</button>
-</div>
-
+      <input type="number" id="minutesInput" placeholder="Minutes" min="1">
+      <button id="setBtn">Set</button>
+    </div>
 
     <div class="controls">
       <button id="startBtn">Start</button>
@@ -41,6 +43,26 @@
       <button data-minutes="10">10 min</button>
       <button data-minutes="25">25 min</button>
     </div>
+
+    <!-- SEO CONTENT (HTML ichida, JS bilan bog‘liq emas) -->
+    <section class="seo">
+      <h2>Free Online Countdown Timer</h2>
+      <p>
+        This free online timer helps you manage time easily with preset buttons and a custom minutes option.
+        It runs directly in your browser and works on desktop and mobile devices.
+      </p>
+      <p>
+        Use the timer for studying, workouts, cooking, focus sessions, or any task that needs accurate timing.
+        No registration or downloads are required.
+      </p>
+      <h3>Why Use This Online Timer?</h3>
+      <ul>
+        <li>Quick presets for 5, 10, and 25 minutes</li>
+        <li>Custom time input</li>
+        <li>Fast, minimal, and free</li>
+        <li>Works entirely client-side</li>
+      </ul>
+    </section>
 
     <!-- AdSense joyi (kontentdan keyin) -->
     <!--
@@ -56,10 +78,8 @@
     -->
 
     <footer>
-      <p>
-        Fast, minimal and free online timer.
-        Works on desktop and mobile.
-      </p>
+      <p>Fast, minimal and free online timer. Works on desktop and mobile.</p>
+      <p><a href="/">← Back to Home</a></p>
     </footer>
   </main>
 
