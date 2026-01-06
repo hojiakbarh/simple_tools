@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Color Picker – Free Online Color Picker Tool</title>
+  <title>Color Picker – Free Online HEX & RGB Color Picker</title>
 
   <meta name="description"
-        content="Free online color picker tool to select colors and get HEX and RGB values instantly. Simple and fast." />
+        content="Free online color picker tool to choose colors using HEX or RGB. Instantly convert HEX to RGB and RGB to HEX." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="canonical" href="https://simple-tools-3nn.pages.dev/color_picker/" />
@@ -13,48 +13,56 @@
 </head>
 <body>
 
-  <main class="container">
-    <h1>Color Picker</h1>
-    <p class="subtitle">Pick a color and copy its values</p>
+<main class="container">
+  <h1>Color Picker</h1>
+  <p class="subtitle">Choose colors using HEX or RGB</p>
 
-    <!-- TOOL -->
-    <div class="picker">
-      <input type="color" id="colorInput" value="#2563eb">
+  <!-- TOOL -->
+  <div class="picker">
 
-      <div class="values">
-        <div>HEX: <strong id="hexValue">#2563eb</strong></div>
-        <div>RGB: <strong id="rgbValue">rgb(37, 99, 235)</strong></div>
-      </div>
+    <input type="color" id="colorInput" value="#2563eb">
+
+    <div class="values">
+      <div>HEX: <strong id="hexValue">#2563eb</strong></div>
+      <div>RGB: <strong id="rgbValue">rgb(37, 99, 235)</strong></div>
     </div>
 
-    <!-- SEO CONTENT -->
-    <section class="seo">
-      <h2>Free Online Color Picker Tool</h2>
-      <p>
-        The Color Picker allows you to select any color and instantly see its HEX and RGB values.
-        It is useful for designers, developers, and anyone working with colors.
-      </p>
-      <p>
-        Simply choose a color using the picker above, and copy the color values for your design
-        or development projects.
-      </p>
-      <h3>Who Is This Tool For?</h3>
-      <ul>
-        <li>Web and graphic designers</li>
-        <li>Frontend developers</li>
-        <li>UI and UX designers</li>
-        <li>Anyone working with colors</li>
-      </ul>
-      <p>
-        This color picker works directly in your browser and does not require any downloads.
-      </p>
-    </section>
+    <div class="rgb-inputs">
+      <input type="number" id="rInput" min="0" max="255" placeholder="R">
+      <input type="number" id="gInput" min="0" max="255" placeholder="G">
+      <input type="number" id="bInput" min="0" max="255" placeholder="B">
+    </div>
 
-    <footer>
-      <p><a href="/">← Back to Home</a></p>
-    </footer>
-  </main>
+  </div>
 
-  <script src="script.js"></script>
+  <!-- SEO -->
+  <section class="seo">
+    <h2>Free Online Color Picker Tool</h2>
+    <p>
+      This free color picker allows you to choose colors using both HEX and RGB formats.
+      It instantly converts HEX to RGB and RGB to HEX, making it ideal for designers and developers.
+    </p>
+    <p>
+      You can pick a color visually or enter RGB values manually.
+      The selected color and values update automatically.
+    </p>
+    <h3>Why Use This Color Picker?</h3>
+    <ul>
+      <li>HEX to RGB and RGB to HEX conversion</li>
+      <li>Manual RGB input support</li>
+      <li>Fast and lightweight</li>
+      <li>Works on all devices</li>
+    </ul>
+    <p>
+      This tool works entirely in your browser and does not store any data.
+    </p>
+  </section>
+
+  <footer>
+    <p><a href="/">← Back to Home</a></p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
