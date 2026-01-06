@@ -8,60 +8,91 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #f7f7f7;
   color: #111;
-  min-height: 100vh;
 }
 
 .container {
   max-width: 720px;
   margin: 0 auto;
   padding: 24px;
-  text-align: center;
 }
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .subtitle {
   color: #555;
-  margin-bottom: 24px;
-}
-
-.inputs {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
   margin-bottom: 20px;
 }
 
-.inputs input {
-  width: 120px;
-  padding: 12px;
+.generator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
   font-size: 1rem;
   border-radius: 10px;
   border: 1px solid #ddd;
 }
 
 button {
-  padding: 12px 22px;
+  margin-top: 12px;
+  padding: 12px;
+  width: 100%;
   font-size: 1rem;
   border-radius: 10px;
   border: none;
-  cursor: pointer;
   background: #2563eb;
   color: #fff;
+  cursor: pointer;
 }
 
 .result {
-  margin-top: 24px;
-  font-size: 3rem;
-  font-weight: 600;
-  color: #16a34a;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.result strong {
+  font-size: 2rem;
+  display: block;
+  margin-top: 6px;
+}
+
+.seo {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.seo h2, .seo h3 {
+  margin-bottom: 10px;
+}
+
+.seo p {
+  margin-bottom: 12px;
+}
+
+.seo ul {
+  padding-left: 18px;
 }
 
 footer {
-  margin-top: 28px;
+  margin-top: 24px;
   font-size: 0.9rem;
-  color: #666;
 }

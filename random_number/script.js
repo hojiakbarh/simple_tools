@@ -1,24 +1,17 @@
-const minInput = document.getElementById("minInput");
-const maxInput = document.getElementById("maxInput");
+const minInput = document.getElementById("minValue");
+const maxInput = document.getElementById("maxValue");
 const generateBtn = document.getElementById("generateBtn");
-const result = document.getElementById("result");
+const resultEl = document.getElementById("resultValue");
 
 generateBtn.addEventListener("click", () => {
   const min = parseInt(minInput.value);
   const max = parseInt(maxInput.value);
 
-  if (isNaN(min) || isNaN(max)) {
-    alert("Please enter valid numbers");
+  if (isNaN(min) || isNaN(max) || min > max) {
+    resultEl.textContent = "–";
     return;
   }
 
-  if (min > max) {
-    alert("Min value must be less than or equal to Max value");
-    return;
-  }
-
-  const randomNumber =
-    Math.floor(Math.random() * (max - min + 1)) + min;
-
-  result.textContent = randomNumber;
+  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  resultEl.textContent = randomNumber;
 });
