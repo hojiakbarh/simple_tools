@@ -1,21 +1,19 @@
 const textInput = document.getElementById("textInput");
-const wordCount = document.getElementById("wordCount");
-const charCount = document.getElementById("charCount");
-const sentenceCount = document.getElementById("sentenceCount");
+const wordCountEl = document.getElementById("wordCount");
+const charCountEl = document.getElementById("charCount");
+const charNoSpaceEl = document.getElementById("charNoSpace");
 
-textInput.addEventListener("input", () => {
-  const text = textInput.value.trim();
+function updateCounts() {
+  const text = textInput.value;
 
-  // Characters
-  charCount.textContent = text.length;
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const chars = text.length;
+  const charsNoSpace = text.replace(/\s/g, "").length;
 
-  // Words
-  const words = text.length === 0 ? 0 : text.split(/\s+/).length;
-  wordCount.textContent = words;
+  wordCountEl.textContent = words;
+  charCountEl.textContent = chars;
+  charNoSpaceEl.textContent = charsNoSpace;
+}
 
-  // Sentences
-  const sentences = text.length === 0
-    ? 0
-    : text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
-  sentenceCount.textContent = sentences;
-});
+textInput.addEventListener("input", updateCounts);
+updateCounts();
