@@ -1,42 +1,35 @@
-const heightInput = document.getElementById("heightInput");
-const weightInput = document.getElementById("weightInput");
-const calcBtn = document.getElementById("calcBtn");
-const bmiValue = document.getElementById("bmiValue");
-const bmiStatus = document.getElementById("bmiStatus");
+const weightInput = document.getElementById("weight");
+const heightInput = document.getElementById("height");
+const calculateBtn = document.getElementById("calculateBtn");
+const bmiValueEl = document.getElementById("bmiValue");
+const bmiCategoryEl = document.getElementById("bmiCategory");
 
-calcBtn.addEventListener("click", () => {
-  const height = parseFloat(heightInput.value);
+calculateBtn.addEventListener("click", () => {
   const weight = parseFloat(weightInput.value);
+  const heightCm = parseFloat(heightInput.value);
 
-  if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
-    alert("Please enter valid height and weight");
+  if (isNaN(weight) || isNaN(heightCm) || weight <= 0 || heightCm <= 0) {
+    bmiValueEl.textContent = "–";
+    bmiCategoryEl.textContent = "Please enter valid values";
     return;
   }
 
-  const heightMeters = height / 100;
-  const bmi = weight / (heightMeters * heightMeters);
-  const roundedBMI = bmi.toFixed(1);
+  const heightM = heightCm / 100;
+  const bmi = weight / (heightM * heightM);
+  const roundedBmi = bmi.toFixed(1);
 
-  bmiValue.textContent = roundedBMI;
+  bmiValueEl.textContent = roundedBmi;
 
-  let status = "";
-  let color = "";
-
+  let category = "";
   if (bmi < 18.5) {
-    status = "Underweight";
-    color = "#f59e0b";
+    category = "Underweight";
   } else if (bmi < 25) {
-    status = "Normal weight";
-    color = "#16a34a";
+    category = "Normal weight";
   } else if (bmi < 30) {
-    status = "Overweight";
-    color = "#f97316";
+    category = "Overweight";
   } else {
-    status = "Obese";
-    color = "#dc2626";
+    category = "Obesity";
   }
 
-  bmiStatus.textContent = status;
-  bmiStatus.style.color = color;
-  bmiValue.style.color = color;
+  bmiCategoryEl.textContent = category;
 });
