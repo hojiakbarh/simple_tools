@@ -1,25 +1,38 @@
-const textarea = document.getElementById("text");
-const result = document.getElementById("result");
+const textInput = document.getElementById("textInput");
+const buttons = document.querySelectorAll(".buttons button");
 
-function toUpper() {
-  textarea.value = textarea.value.toUpperCase();
-  result.textContent = "Converted to UPPERCASE";
+function sentenceCase(text) {
+  return text
+    .toLowerCase()
+    .replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase());
 }
 
-function toLower() {
-  textarea.value = textarea.value.toLowerCase();
-  result.textContent = "Converted to lowercase";
-}
-
-function toSentence() {
-  let text = textarea.value.toLowerCase();
-  textarea.value = text.replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase());
-  result.textContent = "Converted to Sentence case";
-}
-
-function toCapitalize() {
-  textarea.value = textarea.value
+function capitalizeWords(text) {
+  return text
     .toLowerCase()
     .replace(/\b\w/g, c => c.toUpperCase());
-  result.textContent = "Capitalized each word";
 }
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const type = button.dataset.type;
+    let text = textInput.value;
+
+    if (!text) return;
+
+    switch (type) {
+      case "upper":
+        textInput.value = text.toUpperCase();
+        break;
+      case "lower":
+        textInput.value = text.toLowerCase();
+        break;
+      case "sentence":
+        textInput.value = sentenceCase(text);
+        break;
+      case "capitalize":
+        textInput.value = capitalizeWords(text);
+        break;
+    }
+  });
+});

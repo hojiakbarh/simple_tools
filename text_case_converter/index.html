@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Text Case Converter – Simple Tools</title>
-  <meta name="description" content="Convert text to uppercase, lowercase, sentence case or capitalize words instantly with this simple text case converter." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Text Case Converter – Uppercase, Lowercase, Capitalize</title>
+
+  <meta name="description"
+        content="Free text case converter to change text to uppercase, lowercase, sentence case, or capitalize words instantly." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://simple-tools-3nn.pages.dev/text_case_converter/" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main class="container">
-    <h1>Text Case Converter</h1>
-    <p class="subtitle">Change text case instantly</p>
+<main class="container">
+  <h1>Text Case Converter</h1>
+  <p class="subtitle">Convert text case instantly</p>
 
-    <!-- AdSense Top Banner -->
-    <div class="ad ad-top">
-      <!-- AdSense code will be placed here -->
-    </div>
+  <!-- TOOL -->
+  <textarea id="textInput" placeholder="Enter or paste your text here..."></textarea>
 
-    <textarea id="text" placeholder="Paste your text here..."></textarea>
+  <div class="buttons">
+    <button data-type="upper">UPPERCASE</button>
+    <button data-type="lower">lowercase</button>
+    <button data-type="sentence">Sentence case</button>
+    <button data-type="capitalize">Capitalize Words</button>
+  </div>
 
-    <div class="buttons">
-      <button onclick="toUpper()">UPPERCASE</button>
-      <button onclick="toLower()">lowercase</button>
-      <button onclick="toSentence()">Sentence case</button>
-      <button onclick="toCapitalize()">Capitalize Words</button>
-    </div>
+  <!-- SEO TEXT -->
+  <section class="seo-text">
+    <h2>Free Online Text Case Converter</h2>
 
-    <div id="result" class="result"></div>
+    <p>
+      This free text case converter allows you to change text to uppercase,
+      lowercase, sentence case, or capitalized words instantly.
+      It is useful for writers, students, programmers, and content creators.
+    </p>
 
-    <!-- AdSense Content Ad -->
-    <div class="ad ad-content">
-      <!-- AdSense code will be placed here -->
-    </div>
-  </main>
+    <p>
+      Simply paste your text into the box above and choose the desired case format.
+      The conversion happens instantly in your browser without any registration.
+    </p>
+
+    <h3>Available Case Options</h3>
+    <ul>
+      <li>Uppercase – convert all letters to uppercase</li>
+      <li>Lowercase – convert all letters to lowercase</li>
+      <li>Sentence case – capitalize the first letter of each sentence</li>
+      <li>Capitalize words – capitalize the first letter of every word</li>
+    </ul>
+
+    <p>
+      This tool works entirely client-side and does not store or send your text anywhere.
+    </p>
+  </section>
 
   <footer>
-    <p>© Simple Tools</p>
+    <p><a href="/">← Back to Home</a></p>
   </footer>
+</main>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
