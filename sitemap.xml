@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Home -->
   <url><loc>https://onhub.site/</loc></url>
+
+  <!-- Tools -->
   <url><loc>https://onhub.site/word_counter/</loc></url>
   <url><loc>https://onhub.site/bmi_calculator/</loc></url>
   <url><loc>https://onhub.site/unit_converter/</loc></url>
@@ -12,5 +15,11 @@
   <url><loc>https://onhub.site/percentage_calculator/</loc></url>
   <url><loc>https://onhub.site/qr_code_generator/</loc></url>
   <url><loc>https://onhub.site/text_case_converter/</loc></url>
+
+  <!-- Legal / Info pages -->
+  <url><loc>https://onhub.site/about.html</loc></url>
+  <url><loc>https://onhub.site/privacy-policy.html</loc></url>
+  <url><loc>https://onhub.site/terms.html</loc></url>
+  <url><loc>https://onhub.site/contact.html</loc></url>
 
 </urlset>
