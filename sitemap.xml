@@ -1,48 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/word_counter/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/bmi_calculator/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/unit_converter/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/online_timer/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/color_picker/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/random_number/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/password_generator/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/percentage_calculator/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/qr_code_generator/</loc>
-  </url>
-
-  <url>
-    <loc>https://simple-tools-3nn.pages.dev/text_case_converter/</loc>
-  </url>
+  <url><loc>https://onhub.site/</loc></url>
+  <url><loc>https://onhub.site/word_counter/</loc></url>
+  <url><loc>https://onhub.site/bmi_calculator/</loc></url>
+  <url><loc>https://onhub.site/unit_converter/</loc></url>
+  <url><loc>https://onhub.site/online_timer/</loc></url>
+  <url><loc>https://onhub.site/color_picker/</loc></url>
+  <url><loc>https://onhub.site/random_number/</loc></url>
+  <url><loc>https://onhub.site/password_generator/</loc></url>
+  <url><loc>https://onhub.site/percentage_calculator/</loc></url>
+  <url><loc>https://onhub.site/qr_code_generator/</loc></url>
+  <url><loc>https://onhub.site/text_case_converter/</loc></url>
 
 </urlset>
