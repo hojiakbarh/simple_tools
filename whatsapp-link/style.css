@@ -1,0 +1,210 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.04), transparent 60%),
+    #111827;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  background: #0b1220;
+  border-bottom: 1px solid #1f2937;
+  padding: 56px 20px;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 34px;
+  color: #f9fafb;
+}
+
+.site-subtitle {
+  margin-top: 14px;
+  color: #9ca3af;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trust {
+  margin-top: 22px;
+  font-size: 14px;
+  color: #a7f3d0;
+  background: rgba(16,185,129,0.12);
+  padding: 8px 16px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* ===== MAIN ===== */
+.main {
+  max-width: 900px;
+  margin: 64px auto;
+  padding: 0 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  border-radius: 18px;
+  padding: 36px;
+  margin-bottom: 48px;
+}
+
+.card-tool {
+  text-align: center;
+}
+
+/* ===== FORMS ===== */
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #9ca3af;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  color: #e5e7eb;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+/* ===== BUTTON ===== */
+.primary-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  opacity: 0.95;
+}
+
+/* ===== ERROR ===== */
+.input-error {
+  display: none;
+  margin-top: 12px;
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+/* ===== RESULT ===== */
+.result-card {
+  display: none;
+  margin-top: 24px;
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.result-card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* ===== CONTROLS / GRID ===== */
+.controls,
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+/* ===== SEO CONTENT ===== */
+.seo h2,
+.seo h3 {
+  color: #f9fafb;
+  margin-bottom: 12px;
+}
+
+.seo p,
+.seo li {
+  color: #9ca3af;
+}
+
+.seo ul {
+  padding-left: 18px;
+}
+
+/* ===== FOOTER (ETALON) ===== */
+.site-footer {
+  background: #0b1220;
+  border-top: 1px solid #1f2937;
+  padding: 52px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.site-footer hr {
+  border: none;
+  border-top: 1px solid #1f2937;
+  margin-bottom: 22px;
+}
+
+.footer-links a,
+.site-footer a {
+  margin: 0 12px;
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.site-footer a:hover {
+  color: #e5e7eb;
+}
+
+.site-footer p {
+  margin-top: 18px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 28px;
+  }
+  .card {
+    padding: 26px;
+  }
+}

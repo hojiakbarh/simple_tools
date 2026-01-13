@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Home -->
-  <url><loc>https://onhub.site/</loc></url>
+  <url>
+    <loc>https://onhub.site/</loc>
+  </url>
 
   <!-- Tools -->
-  <url><loc>https://onhub.site/word_counter/</loc></url>
-  <url><loc>https://onhub.site/bmi_calculator/</loc></url>
-  <url><loc>https://onhub.site/unit_converter/</loc></url>
-  <url><loc>https://onhub.site/online_timer/</loc></url>
-  <url><loc>https://onhub.site/color_picker/</loc></url>
-  <url><loc>https://onhub.site/random_number/</loc></url>
-  <url><loc>https://onhub.site/password_generator/</loc></url>
-  <url><loc>https://onhub.site/percentage_calculator/</loc></url>
-  <url><loc>https://onhub.site/qr_code_generator/</loc></url>
-  <url><loc>https://onhub.site/text_case_converter/</loc></url>
+  <url><loc>https://onhub.site/word-counter/</loc></url>
+  <url><loc>https://onhub.site/bmi-calculator/</loc></url>
+  <url><loc>https://onhub.site/unit-converter/</loc></url>
+  <url><loc>https://onhub.site/online-timer/</loc></url>
+  <url><loc>https://onhub.site/color-picker/</loc></url>
+  <url><loc>https://onhub.site/random-number/</loc></url>
+  <url><loc>https://onhub.site/password-generator/</loc></url>
+  <url><loc>https://onhub.site/percentage-calculator/</loc></url>
+  <url><loc>https://onhub.site/qr-code-generator/</loc></url>
+  <url><loc>https://onhub.site/text-case-converter/</loc></url>
+  <url><loc>https://onhub.site/image-compressor/</loc></url>
+  <url><loc>https://onhub.site/youtube-thumbnail/</loc></url>
+  <url><loc>https://onhub.site/weather/</loc></url>
+  <url><loc>https://onhub.site/whatsapp-link/</loc></url>
+  <url><loc>https://onhub.site/age-calculator/</loc></url>
 
-  <!-- Legal / Info pages -->
+  <!-- Legal / Info -->
   <url><loc>https://onhub.site/about.html</loc></url>
   <url><loc>https://onhub.site/privacy-policy.html</loc></url>
   <url><loc>https://onhub.site/terms.html</loc></url>

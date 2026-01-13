@@ -12,46 +12,129 @@
   <link rel="canonical" href="https://onhub.site/terms.html" />
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f6f6f6;
-      color: #222;
-      line-height: 1.7;
+    /* ===== RESET ===== */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
+    /* ===== GLOBAL ===== */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(255,255,255,0.04),
+          transparent 60%
+        ),
+        #111827;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #9ca3af;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #e5e7eb;
+    }
+
+    /* ===== HEADER ===== */
     header {
-      background: #111;
-      color: #fff;
-      padding: 30px 20px;
+      background: #0b1220;
+      padding: 56px 20px;
       text-align: center;
+      border-bottom: 1px solid #1f2937;
     }
 
+    header h1 {
+      font-size: 34px;
+      color: #f9fafb;
+    }
+
+    header p {
+      margin-top: 14px;
+      font-size: 16px;
+      color: #9ca3af;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== MAIN ===== */
     main {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      background: #fff;
+      margin: 64px auto;
+      padding: 0 20px;
     }
 
-    h1, h2 {
-      margin-bottom: 15px;
+    .card {
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      border-radius: 18px;
+      padding: 36px;
+      margin-bottom: 48px;
     }
 
-    p, ul {
-      margin-bottom: 15px;
+    h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      color: #f9fafb;
+    }
+
+    p {
+      color: #9ca3af;
+      margin-bottom: 14px;
     }
 
     ul {
-      padding-left: 20px;
+      margin-left: 20px;
+      margin-bottom: 14px;
+      color: #9ca3af;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
+    li {
+      margin-bottom: 8px;
+    }
+
+    .trust {
+      margin-top: 16px;
       font-size: 14px;
-      color: #666;
+      color: #a7f3d0;
+      background: rgba(16,185,129,0.1);
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0b1220;
+      border-top: 1px solid #1f2937;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    footer a {
+      margin: 0 10px;
+    }
+
+    footer hr {
+      border: none;
+      border-top: 1px solid #1f2937;
+      margin-bottom: 22px;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -60,74 +143,96 @@
 
 <header>
   <h1>Terms of Service</h1>
-  <p>Please read these terms carefully</p>
+  <p>
+    Please read these terms carefully before using Simple Tools.
+  </p>
 </header>
 
 <main>
 
-  <h2>Acceptance of Terms</h2>
-  <p>
-    By accessing and using Simple Tools, available at https://onhub.site, you agree to comply with
-    and be bound by these Terms of Service. If you do not agree with any part of these terms,
-    please do not use our website.
-  </p>
+  <section class="card">
+    <h2>Acceptance of Terms</h2>
+    <p>
+      By accessing and using Simple Tools, available at https://onhub.site,
+      you agree to comply with and be bound by these Terms of Service.
+      If you do not agree with any part of these terms, please discontinue use of the website.
+    </p>
+  </section>
 
-  <h2>Use of the Website</h2>
-  <p>
-    Simple Tools provides free online tools for general informational and practical purposes.
-    You agree to use the website only for lawful purposes and in a way that does not infringe
-    the rights of others or restrict their use of the website.
-  </p>
+  <section class="card">
+    <h2>Use of the Website</h2>
+    <p>
+      Simple Tools provides free online utilities for general informational and practical purposes.
+      You agree to use the website only for lawful purposes and in a manner that does not infringe
+      the rights of others or restrict their use of the website.
+    </p>
+  </section>
 
-  <h2>Intellectual Property</h2>
-  <p>
-    All content, tools, design elements, and code on this website are the property of Simple Tools
-    unless otherwise stated. You may not copy, reproduce, or redistribute any part of the website
-    without prior written permission.
-  </p>
+  <section class="card">
+    <h2>Intellectual Property</h2>
+    <p>
+      All content, tools, design elements, and source code on this website are the property of
+      Simple Tools unless otherwise stated.
+      You may not copy, reproduce, or redistribute any part of the website without prior permission.
+    </p>
+  </section>
 
-  <h2>Disclaimer</h2>
-  <p>
-    The tools provided on Simple Tools are offered "as is" without warranties of any kind.
-    We do not guarantee the accuracy, completeness, or reliability of the results generated
-    by our tools. Use of the website and its tools is at your own risk.
-  </p>
+  <section class="card">
+    <h2>Disclaimer</h2>
+    <p>
+      The tools provided on Simple Tools are offered “as is” without warranties of any kind.
+      We do not guarantee the accuracy, completeness, or reliability of results generated by our tools.
+      Use of the website and its tools is at your own risk.
+    </p>
+  </section>
 
-  <h2>Limitation of Liability</h2>
-  <p>
-    Simple Tools shall not be liable for any direct, indirect, incidental, or consequential
-    damages arising from the use or inability to use our website or tools.
-  </p>
+  <section class="card">
+    <h2>Limitation of Liability</h2>
+    <p>
+      Simple Tools shall not be held liable for any direct, indirect, incidental, or consequential
+      damages arising from the use or inability to use the website or its tools.
+    </p>
+  </section>
 
-  <h2>Third-Party Links</h2>
-  <p>
-    Our website may contain links to third-party websites. Simple Tools has no control over
-    the content or practices of these websites and is not responsible for their policies
-    or actions.
-  </p>
+  <section class="card">
+    <h2>Third-Party Links</h2>
+    <p>
+      Our website may contain links to third-party websites.
+      Simple Tools has no control over the content or practices of these websites and is not
+      responsible for their policies or actions.
+    </p>
+  </section>
 
-  <h2>Changes to These Terms</h2>
-  <p>
-    We reserve the right to update or change these Terms of Service at any time without prior notice.
-    Any changes will be effective immediately upon posting on this page.
-  </p>
+  <section class="card">
+    <h2>Changes to These Terms</h2>
+    <p>
+      We reserve the right to update or modify these Terms of Service at any time.
+      Any changes will become effective immediately upon posting on this page.
+    </p>
+  </section>
 
-  <h2>Contact Information</h2>
-  <p>
-    If you have any questions about these Terms of Service, please contact us through our
-    Contact page.
-  </p>
+  <section class="card">
+    <h2>Contact Information</h2>
+    <p>
+      If you have any questions regarding these Terms of Service,
+      please contact us via the Contact page.
+    </p>
+
+    <div class="trust">
+      🔒 Clear terms · Transparent usage · Privacy-first platform
+    </div>
+  </section>
 
 </main>
 
-<footer style="margin-top:40px; text-align:center; font-size:14px; color:#666;">
-  <hr style="margin-bottom:15px;">
-  <a href="/" style="margin:0 8px;">Home</a>
-  <a href="/about.html" style="margin:0 8px;">About</a>
-  <a href="/privacy-policy.html" style="margin:0 8px;">Privacy Policy</a>
-  <a href="/terms.html" style="margin:0 8px;">Terms</a>
-  <a href="/contact.html" style="margin:0 8px;">Contact</a>
-  <p style="margin-top:10px;">© Simple Tools – All rights reserved</p>
+<footer>
+  <hr>
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/contact.html">Contact</a>
+  <p style="margin-top:18px;">© Simple Tools – All rights reserved</p>
 </footer>
 
 </body>

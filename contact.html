@@ -4,56 +4,140 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact Us – Simple Tools</title>
+  <title>Contact Simple Tools – Get in Touch</title>
 
   <meta name="description"
-        content="Contact Simple Tools for questions, feedback, or suggestions. We are happy to hear from you." />
+        content="Contact Simple Tools for questions, feedback, or suggestions. We value user feedback and transparency." />
 
   <link rel="canonical" href="https://onhub.site/contact.html" />
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f6f6f6;
-      color: #222;
-      line-height: 1.7;
+    /* ===== RESET ===== */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
+    /* ===== GLOBAL ===== */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(255,255,255,0.04),
+          transparent 60%
+        ),
+        #111827;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #9ca3af;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #e5e7eb;
+      text-decoration: underline;
+    }
+
+    /* ===== HEADER ===== */
     header {
-      background: #111;
-      color: #fff;
-      padding: 30px 20px;
+      background: #0b1220;
+      padding: 56px 20px;
       text-align: center;
+      border-bottom: 1px solid #1f2937;
     }
 
+    header h1 {
+      font-size: 34px;
+      color: #f9fafb;
+    }
+
+    header p {
+      margin-top: 14px;
+      font-size: 16px;
+      color: #9ca3af;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== MAIN ===== */
     main {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      background: #fff;
+      margin: 64px auto;
+      padding: 0 20px;
     }
 
-    h1, h2 {
-      margin-bottom: 15px;
+    .card {
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      border-radius: 18px;
+      padding: 36px;
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      color: #f9fafb;
     }
 
     p {
-      margin-bottom: 15px;
+      color: #9ca3af;
+      margin-bottom: 14px;
     }
 
     .contact-box {
-      background: #f2f2f2;
-      padding: 20px;
-      border-radius: 6px;
+      background: #0f172a;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 18px;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
+    .contact-box strong {
+      color: #e5e7eb;
+    }
+
+    .trust {
+      margin-top: 18px;
       font-size: 14px;
-      color: #666;
+      color: #a7f3d0;
+      background: rgba(16,185,129,0.1);
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0b1220;
+      border-top: 1px solid #1f2937;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    footer a {
+      margin: 0 10px;
+    }
+
+    footer hr {
+      border: none;
+      border-top: 1px solid #1f2937;
+      margin-bottom: 22px;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -62,43 +146,56 @@
 
 <header>
   <h1>Contact Us</h1>
-  <p>Get in touch with Simple Tools</p>
+  <p>
+    Get in touch with Simple Tools for questions, feedback, or suggestions.
+  </p>
 </header>
 
 <main>
 
-  <h2>We’d Love to Hear From You</h2>
-  <p>
-    If you have any questions, feedback, suggestions, or encounter any issues while using our tools,
-    feel free to contact us. Your feedback helps us improve and expand our platform.
-  </p>
+  <section class="card">
+    <h2>We’d Love to Hear From You</h2>
+    <p>
+      If you have questions, feedback, suggestions, or notice any issues while using our tools,
+      feel free to contact us. Your feedback helps us improve and expand Simple Tools.
+    </p>
+  </section>
 
-  <div class="contact-box">
+  <section class="card">
     <h2>Contact Information</h2>
-    <p>
-      📧 Email: <strong>contact@onhub.site</strong>
-    </p>
-    <p>
-      Please include as much detail as possible in your message so we can assist you more effectively.
-    </p>
-  </div>
 
-  <h2>Response Time</h2>
-  <p>
-    We aim to respond to all inquiries within a reasonable time. Thank you for your patience and
-    for using Simple Tools.
-  </p>
+    <div class="contact-box">
+      <p>
+        📧 Email: <strong>contact@onhub.site</strong>
+      </p>
+      <p>
+        Please include as much detail as possible in your message so we can assist you efficiently.
+      </p>
+    </div>
+
+    <div class="trust">
+      🔒 No registration · No tracking · No personal data stored
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Response Time</h2>
+    <p>
+      We aim to respond to all inquiries within a reasonable timeframe.
+      Thank you for your patience and for using Simple Tools.
+    </p>
+  </section>
 
 </main>
 
-<footer style="margin-top:40px; text-align:center; font-size:14px; color:#666;">
-  <hr style="margin-bottom:15px;">
-  <a href="/" style="margin:0 8px;">Home</a>
-  <a href="/about.html" style="margin:0 8px;">About</a>
-  <a href="/privacy-policy.html" style="margin:0 8px;">Privacy Policy</a>
-  <a href="/terms.html" style="margin:0 8px;">Terms</a>
-  <a href="/contact.html" style="margin:0 8px;">Contact</a>
-  <p style="margin-top:10px;">© Simple Tools – All rights reserved</p>
+<footer>
+  <hr>
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/contact.html">Contact</a>
+  <p style="margin-top:18px;">© Simple Tools – All rights reserved</p>
 </footer>
 
 </body>

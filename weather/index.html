@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>5 Day Weather Forecast – Free Weather Tool | OnHub</title>
+
+  <meta name="description"
+        content="Check 5 day weather forecast for any city worldwide. Free, fast and privacy-friendly weather tool by OnHub. No registration required." />
+
+  <meta name="google-adsense-account" content="ca-pub-3051499633734124">
+  <link rel="canonical" href="https://onhub.site/weather/" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== HEADER (HAMMA TOOL BILAN BIR XIL) ===== -->
+<header class="site-header">
+  <h1 class="site-title">Weather Forecast</h1>
+  <p class="site-subtitle">
+    Check current weather and 5 day forecast by city.<br>
+    Simple, fast and privacy-friendly.
+  </p>
+  <div class="trust">🔒 Privacy-first · Real-time data</div>
+</header>
+
+<main class="main">
+
+  <!-- ===== TOOL CARD ===== -->
+  <section class="card card-tool">
+
+    <div class="field">
+      <label for="city">City name</label>
+      <input type="text" id="city" placeholder="e.g. Tashkent" />
+    </div>
+
+    <button id="getWeatherBtn" class="primary-btn">
+      <span id="btnText">Get Weather</span>
+      <span id="loader">⏳</span>
+    </button>
+
+    <p class="input-error" id="errorMsg">
+      Please enter a valid city name.
+    </p>
+
+    <!-- CURRENT WEATHER -->
+    <div class="result-card" id="currentWeather">
+      <h3 id="cityName"></h3>
+      <strong id="temp"></strong>
+      <p id="condition"></p>
+    </div>
+
+    <!-- 5 DAY FORECAST -->
+    <div class="forecast" id="forecast"></div>
+
+  </section>
+
+  <!-- ===== SEO CONTENT ===== -->
+  <section class="card seo">
+    <h2>Free 5 Day Weather Forecast</h2>
+
+    <p>
+      The OnHub Weather Forecast tool allows you to check current weather
+      conditions and a 5 day forecast for any city worldwide.
+      Simply enter a city name to get accurate weather information instantly.
+    </p>
+
+    <p>
+      This weather tool works entirely in your browser.
+      No personal data is stored or tracked.
+    </p>
+
+    <ul>
+      <li>✔ Current weather conditions</li>
+      <li>✔ 5 day weather forecast</li>
+      <li>✔ Free and easy to use</li>
+      <li>✔ Privacy-friendly</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER (BARCHA TOOL BILAN BIR XIL) ===== -->
+<footer class="site-footer">
+  <hr />
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/contact.html">Contact</a>
+  <p>© OnHub – Simple Tools. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

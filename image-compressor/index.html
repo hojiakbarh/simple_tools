@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Image Compressor & Resizer – Free Online Tool | OnHub</title>
+
+  <meta name="description"
+        content="Free image compressor and resizer by OnHub. Compress, resize and optimize images online. No uploads, no tracking, privacy-first." />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="google-adsense-account" content="ca-pub-3051499633734124">
+  <link rel="canonical" href="https://onhub.site/image-compressor/" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <h1 class="site-title">Image Compressor & Resizer</h1>
+  <p class="site-subtitle">
+    Compress and resize images online without quality loss.<br>
+    Fast, simple and privacy-first.
+  </p>
+  <div class="trust">🔒 100% client-side · No uploads</div>
+</header>
+
+<main class="main">
+
+  <!-- TOOL -->
+  <section class="card card-tool">
+
+    <input type="file" id="fileInput" accept="image/*" />
+
+    <div class="controls">
+      <div>
+        <label>Quality</label>
+        <input type="range" id="quality" min="10" max="100" value="80">
+        <span id="qualityValue">80%</span>
+      </div>
+
+      <div>
+        <label>Width (px)</label>
+        <input type="number" id="width" placeholder="Auto">
+      </div>
+
+      <div>
+        <label>Height (px)</label>
+        <input type="number" id="height" placeholder="Auto">
+      </div>
+    </div>
+
+    <button id="processBtn" class="primary-btn">
+      Compress Image
+    </button>
+
+    <p class="input-error" id="errorMsg">
+      Please select a valid image file.
+    </p>
+
+    <div class="result-card" id="result">
+      <img id="preview" alt="Compressed image preview">
+      <p id="sizeInfo"></p>
+      <a id="downloadBtn" download>Download Image</a>
+    </div>
+
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="card seo">
+    <h2>Free Online Image Compressor</h2>
+    <p>
+      OnHub Image Compressor helps you reduce image file size and resize images
+      directly in your browser. Your files are never uploaded to any server.
+    </p>
+    <ul>
+      <li>✔ Compress JPG, PNG, WebP</li>
+      <li>✔ Resize by width or height</li>
+      <li>✔ Fast and secure</li>
+      <li>✔ Free to use</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <hr>
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/contact.html">Contact</a>
+  <p>© OnHub – Simple Tools. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

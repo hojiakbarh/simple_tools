@@ -7,51 +7,134 @@
   <title>Privacy Policy – Simple Tools</title>
 
   <meta name="description"
-        content="Privacy Policy for Simple Tools. Learn how we collect, use, and protect user information on our website." />
+        content="Privacy Policy for Simple Tools. Learn how we handle data, cookies, and user privacy in a transparent way." />
 
   <link rel="canonical" href="https://onhub.site/privacy-policy.html" />
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f6f6f6;
-      color: #222;
-      line-height: 1.7;
+    /* ===== RESET ===== */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
+    /* ===== GLOBAL ===== */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(255,255,255,0.04),
+          transparent 60%
+        ),
+        #111827;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #9ca3af;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #e5e7eb;
+    }
+
+    /* ===== HEADER ===== */
     header {
-      background: #111;
-      color: #fff;
-      padding: 30px 20px;
+      background: #0b1220;
+      padding: 56px 20px;
       text-align: center;
+      border-bottom: 1px solid #1f2937;
     }
 
+    header h1 {
+      font-size: 34px;
+      color: #f9fafb;
+    }
+
+    header p {
+      margin-top: 14px;
+      font-size: 16px;
+      color: #9ca3af;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== MAIN ===== */
     main {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      background: #fff;
+      margin: 64px auto;
+      padding: 0 20px;
     }
 
-    h1, h2 {
-      margin-bottom: 15px;
+    .card {
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      border-radius: 18px;
+      padding: 36px;
+      margin-bottom: 48px;
     }
 
-    p, ul {
-      margin-bottom: 15px;
+    h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      color: #f9fafb;
+    }
+
+    p {
+      color: #9ca3af;
+      margin-bottom: 14px;
     }
 
     ul {
-      padding-left: 20px;
+      margin-left: 20px;
+      margin-bottom: 14px;
+      color: #9ca3af;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
+    li {
+      margin-bottom: 8px;
+    }
+
+    .trust {
+      margin-top: 16px;
       font-size: 14px;
-      color: #666;
+      color: #a7f3d0;
+      background: rgba(16,185,129,0.1);
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0b1220;
+      border-top: 1px solid #1f2937;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    footer a {
+      margin: 0 10px;
+    }
+
+    footer hr {
+      border: none;
+      border-top: 1px solid #1f2937;
+      margin-bottom: 22px;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -60,86 +143,103 @@
 
 <header>
   <h1>Privacy Policy</h1>
-  <p>Your privacy is important to us</p>
+  <p>
+    Your privacy matters. This page explains how Simple Tools handles information and cookies.
+  </p>
 </header>
 
 <main>
 
-  <h2>Introduction</h2>
-  <p>
-    At Simple Tools, accessible from https://onhub.site, we respect your privacy and are committed
-    to protecting it. This Privacy Policy document explains what information is collected and how
-    it is used when you visit our website.
-  </p>
+  <section class="card">
+    <h2>Introduction</h2>
+    <p>
+      Simple Tools, accessible at https://onhub.site, respects your privacy and is committed to
+      protecting it. This Privacy Policy explains what information is collected and how it is used
+      when you visit our website.
+    </p>
+  </section>
 
-  <h2>Information We Collect</h2>
-  <p>
-    Simple Tools does not require users to create accounts or provide personal information to use
-    our tools. We do not collect personal data such as names, addresses, or phone numbers.
-  </p>
+  <section class="card">
+    <h2>Information We Collect</h2>
+    <p>
+      Simple Tools does not require account registration and does not collect personal information
+      such as names, email addresses, or phone numbers to use our tools.
+    </p>
+    <p>
+      We may collect limited non-personal information such as browser type, device information,
+      IP address, and pages visited. This data is used only to understand website performance and
+      improve user experience.
+    </p>
 
-  <p>
-    Like many websites, we may collect non-personal information such as browser type, device type,
-    IP address, and pages visited. This information is used only for analytics and improving the
-    user experience.
-  </p>
+    <div class="trust">
+      🔒 No registration · No personal data stored
+    </div>
+  </section>
 
-  <h2>Cookies</h2>
-  <p>
-    Simple Tools may use cookies to store information about visitors’ preferences and to optimize
-    the website experience. Cookies help us understand how users interact with our website.
-  </p>
+  <section class="card">
+    <h2>Cookies</h2>
+    <p>
+      Simple Tools may use cookies to improve website functionality and understand how visitors
+      interact with our content.
+    </p>
+    <p>
+      Third-party vendors, including Google, may use cookies to serve ads based on a user’s prior
+      visits to this or other websites. Google’s use of advertising cookies enables it and its
+      partners to show ads to users based on their interests.
+    </p>
+    <p>
+      You can opt out of personalized advertising by visiting
+      <a href="https://adssettings.google.com" target="_blank" rel="noopener">
+        Google Ads Settings
+      </a>.
+    </p>
+  </section>
 
-  <p>
-    Third-party vendors, including Google, may use cookies to serve ads based on a user's prior
-    visits to this or other websites. Google's use of advertising cookies enables it and its
-    partners to serve ads to users based on their visit to our site and/or other sites on the
-    Internet.
-  </p>
+  <section class="card">
+    <h2>How We Use Information</h2>
+    <ul>
+      <li>To operate and maintain the website</li>
+      <li>To improve tool quality and performance</li>
+      <li>To analyze general usage trends</li>
+      <li>To display advertisements through Google AdSense</li>
+    </ul>
+  </section>
 
-  <p>
-    Users may opt out of personalized advertising by visiting
-    <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>.
-  </p>
+  <section class="card">
+    <h2>Third-Party Privacy Policies</h2>
+    <p>
+      Simple Tools’ Privacy Policy does not apply to other advertisers or websites.
+      We recommend reviewing the Privacy Policies of third-party services for detailed information
+      about their practices and opt-out options.
+    </p>
+  </section>
 
-  <h2>How We Use Information</h2>
-  <ul>
-    <li>To operate and maintain our website</li>
-    <li>To improve the quality and functionality of our tools</li>
-    <li>To analyze website usage and performance</li>
-    <li>To display relevant advertisements through Google AdSense</li>
-  </ul>
+  <section class="card">
+    <h2>Children’s Information</h2>
+    <p>
+      Simple Tools does not knowingly collect any personal information from children under the age
+      of 13. If you believe that a child has provided personal data on this website, please contact
+      us so we can promptly remove it.
+    </p>
+  </section>
 
-  <h2>Third-Party Privacy Policies</h2>
-  <p>
-    Simple Tools’ Privacy Policy does not apply to other advertisers or websites. We advise you to
-    consult the respective Privacy Policies of third-party ad servers or websites for more detailed
-    information about their practices and instructions about how to opt out of certain options.
-  </p>
-
-  <h2>Children’s Information</h2>
-  <p>
-    Simple Tools does not knowingly collect any Personal Identifiable Information from children
-    under the age of 13. If you believe that your child provided this kind of information on our
-    website, please contact us immediately and we will do our best to promptly remove such
-    information from our records.
-  </p>
-
-  <h2>Consent</h2>
-  <p>
-    By using our website, you hereby consent to our Privacy Policy and agree to its terms.
-  </p>
+  <section class="card">
+    <h2>Consent</h2>
+    <p>
+      By using our website, you consent to this Privacy Policy and agree to its terms.
+    </p>
+  </section>
 
 </main>
 
-<footer style="margin-top:40px; text-align:center; font-size:14px; color:#666;">
-  <hr style="margin-bottom:15px;">
-  <a href="/" style="margin:0 8px;">Home</a>
-  <a href="/about.html" style="margin:0 8px;">About</a>
-  <a href="/privacy-policy.html" style="margin:0 8px;">Privacy Policy</a>
-  <a href="/terms.html" style="margin:0 8px;">Terms</a>
-  <a href="/contact.html" style="margin:0 8px;">Contact</a>
-  <p style="margin-top:10px;">© Simple Tools – All rights reserved</p>
+<footer>
+  <hr>
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/contact.html">Contact</a>
+  <p style="margin-top:18px;">© Simple Tools – All rights reserved</p>
 </footer>
 
 </body>

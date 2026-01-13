@@ -4,15 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Simple Tools – Free Online Tools for Everyday Tasks</title>
+  <!-- SEO TITLE -->
+  <title>
+    Free Online Tools – Online Timer, Word Counter, BMI Calculator | OnHub
+  </title>
 
+  <!-- SEO DESCRIPTION -->
   <meta name="description"
-        content="Simple Tools is a free online platform offering useful tools such as word counter, BMI calculator, online timer, random number generator, and more." />
+        content="OnHub provides free online tools including online timer, word counter, BMI calculator, percentage calculator, QR code generator, color picker and more. No registration. No tracking. 100% privacy-friendly." />
 
+  <meta name="google-adsense-account" content="ca-pub-3051499633734124">
+  <!-- CANONICAL -->
   <link rel="canonical" href="https://onhub.site/" />
 
+  <!-- ROBOTS -->
+  <meta name="robots" content="index, follow" />
 
-  <!-- ===== CSS (INLINE) ===== -->
+  <!-- FAVICON (logo shu yerga ulanadi, header ichiga EMAS) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico">
+
   <style>
     * {
       margin: 0;
@@ -22,167 +33,273 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f6f6f6;
-      color: #222;
-      line-height: 1.6;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.04), transparent 60%),
+        #111827;
+      color: #e5e7eb;
+      line-height: 1.7;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== HEADER ===== */
     header {
-      background: #111;
-      color: #fff;
-      padding: 32px 20px;
+      background: #0b1220;
+      border-bottom: 1px solid #1f2937;
+      padding: 64px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 32px;
+      font-size: 38px;
+      color: #f9fafb;
+      letter-spacing: 0.4px;
     }
 
     header p {
-      margin-top: 8px;
+      margin-top: 16px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 16px;
+      color: #9ca3af;
+    }
+
+    .trust {
+      margin-top: 24px;
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
       font-size: 14px;
-      color: #ccc;
+      background: rgba(16,185,129,0.12);
+      color: #a7f3d0;
     }
 
+    /* ===== MAIN ===== */
     main {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
+      max-width: 1200px;
+      margin: 72px auto;
+      padding: 0 20px;
     }
 
+    /* ===== CARD ===== */
+    .section {
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 64px;
+    }
+
+    .section h2 {
+      font-size: 26px;
+      color: #f9fafb;
+      margin-bottom: 28px;
+    }
+
+    /* ===== TOOLS GRID ===== */
     .tools {
-      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
     }
 
-    .tools h2 {
-      margin-bottom: 15px;
+    .tool {
+      background: #0f172a;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 26px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .tools ul {
-      list-style: none;
+    .tool:hover {
+      transform: translateY(-4px);
+      border-color: #374151;
     }
 
-    .tools li {
-      margin-bottom: 8px;
+    .tool .icon {
+      font-size: 26px;
+      margin-bottom: 12px;
+      color: #9ca3af;
     }
 
-    .tools a {
-      text-decoration: none;
-      color: #0066cc;
-    }
-
-    .tools a:hover {
-      text-decoration: underline;
-    }
-
-    .seo {
-      background: #fff;
-      padding: 25px;
-      border-radius: 6px;
-    }
-
-    .seo h2,
-    .seo h3 {
-      margin-bottom: 15px;
-    }
-
-    .seo p {
-      margin-bottom: 15px;
-    }
-
-    .seo ul {
-      padding-left: 20px;
-    }
-
-    .seo li {
+    .tool h3 {
+      font-size: 16px;
+      color: #f3f4f6;
       margin-bottom: 6px;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
+    .tool p {
       font-size: 14px;
-      color: #666;
+      color: #9ca3af;
+    }
+
+    /* ===== WHY ===== */
+    .why p {
+      max-width: 820px;
+      margin-bottom: 14px;
+      color: #9ca3af;
+    }
+
+    .why ul {
+      margin-top: 16px;
+      margin-left: 20px;
+      color: #9ca3af;
+    }
+
+    .why li {
+      margin-bottom: 6px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0b1220;
+      border-top: 1px solid #1f2937;
+      padding: 48px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    footer a {
+      margin: 0 12px;
+      color: #9ca3af;
+    }
+
+    footer a:hover {
+      color: #e5e7eb;
+      text-decoration: underline;
+    }
+
+    footer hr {
+      border: none;
+      border-top: 1px solid #1f2937;
+      margin-bottom: 22px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Simple Tools</h1>
-    <p>Free online tools for everyday tasks</p>
-  </header>
+<header>
+  <h1>Free Online Tools by OnHub</h1>
+  <p>
+    Fast, simple and privacy-friendly online tools.
+    No registration, no tracking, and no personal data stored.
+  </p>
+  <div class="trust">🔒 100% client-side · Privacy-first</div>
+</header>
 
-  <main>
+<main>
 
-    <!-- TOOLS LIST -->
-    <section class="tools">
-      <h2>Available Tools</h2>
-      <ul>
-        <li><a href="/online_timer/">Online Timer</a></li>
-        <li><a href="/word_counter/">Word Counter</a></li>
-        <li><a href="/random_number/">Random Number Generator</a></li>
-        <li><a href="/bmi_calculator/">BMI Calculator</a></li>
-        <li><a href="/color_picker/">Color Picker</a></li>
-        <li><a href="/percentage_calculator/">Percentage Calculator</a></li>
-        <li><a href="/password_generator/">Password Generator</a></li>
-        <li><a href="/qr_code_generator/">QR Code Generator</a></li>
-        <li><a href="/unit_converter/">Unit Converter</a></li>
-        <li><a href="/text_case_converter/">Text Case Converter</a></li>
-      </ul>
-    </section>
+  <!-- TOOLS -->
+  <section class="section">
+    <h2>Available Online Tools</h2>
 
-    <!-- SEO CONTENT -->
-    <section class="seo">
-      <h2>Free Online Tools for Daily Use</h2>
+    <div class="tools">
+      <a href="/online-timer/" class="tool">
+        <div class="icon">⏱</div>
+        <h3>Online Timer</h3>
+        <p>Free countdown timer in your browser</p>
+      </a>
 
-      <p>
-        Simple Tools is a collection of free and easy-to-use online utilities designed to help users
-        perform everyday tasks quickly and efficiently. All tools work directly in your browser,
-        without requiring installation or registration.
-      </p>
+      <a href="/word-counter/" class="tool">
+        <div class="icon">✍️</div>
+        <h3>Word Counter</h3>
+        <p>Count words and characters instantly</p>
+      </a>
 
-      <p>
-        Our platform includes popular tools such as a word counter, BMI calculator, online timer,
-        random number generator, password generator, and QR code generator. Each tool is built with
-        simplicity and accuracy in mind.
-      </p>
+      <a href="/bmi-calculator/" class="tool">
+        <div class="icon">⚖️</div>
+        <h3>BMI Calculator</h3>
+        <p>Calculate your body mass index</p>
+      </a>
 
-      <p>
-        Simple Tools is ideal for students, writers, developers, designers, and anyone who needs fast
-        calculations or text processing. The website is lightweight, responsive, and works smoothly
-        on both desktop and mobile devices.
-      </p>
+      <a href="/percentage-calculator/" class="tool">
+        <div class="icon">📊</div>
+        <h3>Percentage Calculator</h3>
+        <p>Fast and accurate percentage math</p>
+      </a>
 
-      <h3>Why Choose Simple Tools?</h3>
-      <ul>
-        <li>100% free online tools</li>
-        <li>No downloads or sign-up required</li>
-        <li>Fast and lightweight</li>
-        <li>Works on all modern browsers</li>
-      </ul>
-    </section>
+      <a href="/password-generator/" class="tool">
+        <div class="icon">🔐</div>
+        <h3>Password Generator</h3>
+        <p>Create strong secure passwords</p>
+      </a>
 
-  </main>
+      <a href="/qr-code-generator/" class="tool">
+        <div class="icon">🔳</div>
+        <h3>QR Code Generator</h3>
+        <p>Generate QR codes instantly</p>
+      </a>
 
-    <footer style="margin-top:40px; text-align:center; font-size:14px; color:#666;">
-      <hr style="margin-bottom:15px;">
-      <a href="/" style="margin:0 8px;">Home</a>
-      <a href="/about.html" style="margin:0 8px;">About</a>
-      <a href="/privacy-policy.html" style="margin:0 8px;">Privacy Policy</a>
-      <a href="/terms.html" style="margin:0 8px;">Terms</a>
-      <a href="/contact.html" style="margin:0 8px;">Contact</a>
-      <p style="margin-top:10px;">© Simple Tools – All rights reserved</p>
-    </footer>
+      <a href="/unit-converter/" class="tool">
+        <div class="icon">📐</div>
+        <h3>Unit Converter</h3>
+        <p>Convert units quickly and easily</p>
+      </a>
 
-  <!-- ===== JS (INLINE) ===== -->
-  <script>
-    // Minimal JS (does not affect SEO)
-    document.addEventListener("DOMContentLoaded", function () {
-      console.log("Simple Tools homepage loaded");
-    });
-  </script>
+      <a href="/text-case-converter/" class="tool">
+        <div class="icon">🔤</div>
+        <h3>Text Case Converter</h3>
+        <p>Uppercase, lowercase and more</p>
+      </a>
+
+      <a href="/color-picker/" class="tool">
+        <div class="icon">🎨</div>
+        <h3>Color Picker</h3>
+        <p>Pick and convert colors easily</p>
+      </a>
+
+      <a href="/random-number/" class="tool">
+        <div class="icon">🎲</div>
+        <h3>Random Number Generator</h3>
+        <p>Generate random numbers instantly</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section why">
+    <h2>Why OnHub Simple Tools?</h2>
+
+    <p>
+      OnHub Simple Tools is built to be clean, fast and distraction-free.
+      Every tool works instantly without unnecessary buttons or steps.
+    </p>
+
+    <p>
+      All tools run directly in your browser — your data never leaves your device.
+    </p>
+
+    <ul>
+      <li>✔ Free online tools</li>
+      <li>✔ No registration required</li>
+      <li>✔ No personal data stored</li>
+      <li>✔ Consistent UI & UX across all tools</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <hr>
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/contact.html">Contact</a>
+  <p style="margin-top:18px;">© OnHub – Simple Tools. All rights reserved.</p>
+</footer>
 
 </body>
 </html>

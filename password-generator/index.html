@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Password Generator – Create Secure Passwords | OnHub</title>
+
+  <meta name="description"
+        content="Free password generator by OnHub. Create strong, secure passwords instantly. No registration, no tracking, and no data stored." />
+  <meta name="google-adsense-account" content="ca-pub-3051499633734124">
+  <link rel="canonical" href="https://onhub.site/password-generator/" />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== HEADER (BARCHA TOOL’LAR BILAN BIR XIL) ===== -->
+<header class="site-header">
+  <h1>Password Generator</h1>
+  <p class="site-subtitle">
+    Create strong and secure passwords instantly.<br>
+    No registration · No tracking · 100% client-side
+  </p>
+  <div class="trust">🔒 Privacy-first by OnHub</div>
+</header>
+
+<main class="main">
+
+  <!-- ===== TOOL CARD ===== -->
+  <section class="card card-tool">
+
+    <div class="password-output">
+      <input type="text" id="password" readonly />
+      <button id="copyBtn">Copy</button>
+    </div>
+
+    <div class="options">
+      <label><input type="checkbox" id="uppercase" checked> Uppercase (A–Z)</label>
+      <label><input type="checkbox" id="lowercase" checked> Lowercase (a–z)</label>
+      <label><input type="checkbox" id="numbers" checked> Numbers (0–9)</label>
+      <label><input type="checkbox" id="symbols"> Symbols (!@#$)</label>
+    </div>
+
+    <div class="length">
+      <label>Password Length: <strong id="lengthValue">12</strong></label>
+      <input type="range" id="length" min="6" max="32" value="12" />
+    </div>
+
+    <button class="primary-btn" id="generateBtn">Generate Password</button>
+
+  </section>
+
+  <!-- ===== SEO CONTENT ===== -->
+  <section class="card">
+    <h2>Free Online Password Generator</h2>
+
+    <p>
+      The Password Generator by OnHub helps you create strong and secure passwords
+      for online accounts, email, banking, and applications.
+    </p>
+
+    <p>
+      Choose your password length and character types, then generate a secure password instantly.
+      Everything runs locally in your browser — your password is never stored or sent anywhere.
+    </p>
+
+    <ul>
+      <li>✔ Strong random password generation</li>
+      <li>✔ Custom length and character options</li>
+      <li>✔ One-click copy</li>
+      <li>✔ No registration or tracking</li>
+    </ul>
+
+    <p>
+      Using strong passwords helps protect your accounts from unauthorized access
+      and improves overall online security.
+    </p>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER (YOPISHMAYDIGAN FINAL VARIANT) ===== -->
+<footer class="site-footer">
+  <hr>
+
+  <nav class="footer-nav">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <p>© OnHub – Simple Tools. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
