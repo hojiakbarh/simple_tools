@@ -17,8 +17,9 @@ body {
 
 /* ===== HEADER ===== */
 .site-header {
-  background: #0b1220;
-  border-bottom: 1px solid #1f2937;
+  background: rgba(11,18,32,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   padding: 56px 20px;
   text-align: center;
 }
@@ -32,17 +33,16 @@ body {
   margin-top: 14px;
   color: #9ca3af;
   max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .trust {
   margin-top: 22px;
-  font-size: 14px;
-  color: #a7f3d0;
-  background: rgba(16,185,129,0.12);
   padding: 8px 16px;
   border-radius: 999px;
+  font-size: 14px;
+  background: rgba(16,185,129,0.12);
+  color: #a7f3d0;
   display: inline-block;
 }
 
@@ -55,8 +55,9 @@ body {
 
 /* ===== CARD ===== */
 .card {
-  background: #0b1220;
-  border: 1px solid #1f2937;
+  background: rgba(11,18,32,0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 18px;
   padding: 36px;
   margin-bottom: 48px;
@@ -66,7 +67,7 @@ body {
   text-align: center;
 }
 
-/* ===== FORMS ===== */
+/* ===== LABEL ===== */
 label {
   display: block;
   margin-bottom: 6px;
@@ -74,15 +75,23 @@ label {
   text-align: left;
 }
 
+/* ===== INPUT / TEXTAREA / SELECT ===== */
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   padding: 14px;
-  background: #0f172a;
-  border: 1px solid #1f2937;
+
+  background: rgba(15,23,42,0.6);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
+
   color: #e5e7eb;
   font-size: 16px;
+
+  transition: none; /* ❌ yorqinlashish yo‘q */
 }
 
 textarea {
@@ -90,15 +99,27 @@ textarea {
   resize: vertical;
 }
 
-input[type="file"] {
-  background: none;
-  border: none;
-  padding: 0;
-  margin-bottom: 18px;
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280;
 }
 
-input[type="range"] {
-  padding: 0;
+/* 🚫 FOCUS / AUTOFILL / SUGGESTION — OQ BO‘LMAYDI */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  background: rgba(15,23,42,0.6);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: none;
+}
+
+/* Chrome autofill fix */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #e5e7eb;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(15,23,42,0.6) inset;
+  transition: background-color 9999s ease-in-out 0s;
 }
 
 /* ===== BUTTON ===== */
@@ -106,71 +127,102 @@ input[type="range"] {
   width: 100%;
   margin-top: 18px;
   padding: 14px;
+
+  background: #2e374b;
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
-  background: #2563eb;
-  border: none;
+
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+
+  transition: none; /* ❌ flash yo‘q */
 }
 
-.primary-btn:hover {
-  opacity: 0.95;
+.primary-btn:hover,
+.primary-btn:focus {
+  background: rgba(125, 146, 190, 0.85);
+  outline: none;
 }
 
-/* ===== ERROR ===== */
-.input-error {
+/* ===== RESULT CARD ===== */
+.result-card {
   display: none;
-  margin-top: 12px;
-  color: #fca5a5;
+  margin-top: 28px;
+  padding: 24px;
+
+  background: rgba(15,23,42,0.6);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+}
+
+.result-card strong {
+  font-size: 42px;
+  display: block;
+}
+
+/* ===== GRID / CONTROLS ===== */
+.controls,
+.controls-grid,
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.forecast div {
+  background: rgba(15,23,42,0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 14px;
   font-size: 14px;
 }
 
-/* ===== RESULT ===== */
-.result-card {
-  display: none;
-  margin-top: 24px;
-  background: #0f172a;
-  border: 1px solid #1f2937;
-  border-radius: 16px;
-  padding: 18px;
+/* ===== WHATSAPP LINK ===== */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+
+  background: rgba(15,23,42,0.6);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+
+  color: #e5e7eb;
+  font-size: 16px;
+  text-decoration: none;
+
+  transition: none;
 }
 
-.result-card img {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-bottom: 12px;
+.whatsapp-link svg {
+  width: 20px;
+  height: 20px;
+  fill: #22c55e;
 }
 
-/* ===== CONTROLS / GRID ===== */
-.controls,
-.controls-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  margin-bottom: 18px;
+.whatsapp-link:hover,
+.whatsapp-link:focus {
+  background: rgba(15,23,42,0.6);
+  outline: none;
 }
 
-/* ===== SEO CONTENT ===== */
-.seo h2,
-.seo h3 {
-  color: #f9fafb;
-  margin-bottom: 12px;
-}
-
-.seo p,
-.seo li {
-  color: #9ca3af;
-}
-
-.seo ul {
-  padding-left: 18px;
-}
-
-/* ===== FOOTER (ETALON) ===== */
+/* ===== FOOTER ===== */
 .site-footer {
-  background: #0b1220;
-  border-top: 1px solid #1f2937;
+  background: rgba(11,18,32,0.85);
+  border-top: 1px solid rgba(255,255,255,0.06);
   padding: 52px 20px;
   text-align: center;
   font-size: 14px;
@@ -179,18 +231,16 @@ input[type="range"] {
 
 .site-footer hr {
   border: none;
-  border-top: 1px solid #1f2937;
+  border-top: 1px solid rgba(255,255,255,0.06);
   margin-bottom: 22px;
 }
 
-.footer-links a,
 .site-footer a {
   margin: 0 12px;
   color: #9ca3af;
   text-decoration: none;
 }
 
-.footer-links a:hover,
 .site-footer a:hover {
   color: #e5e7eb;
 }
@@ -204,6 +254,7 @@ input[type="range"] {
   .site-title {
     font-size: 28px;
   }
+
   .card {
     padding: 26px;
   }

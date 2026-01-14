@@ -1,9 +1,11 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== GLOBAL ===== */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
@@ -13,7 +15,7 @@ body {
   line-height: 1.7;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .site-header {
   background: #0b1220;
   padding: 64px 20px;
@@ -29,6 +31,9 @@ body {
 .site-subtitle {
   margin-top: 16px;
   color: #9ca3af;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .trust {
@@ -41,17 +46,18 @@ body {
   color: #a7f3d0;
 }
 
-/* MAIN */
+/* ===== MAIN ===== */
 .main {
   max-width: 900px;
   margin: 64px auto;
   padding: 0 20px;
 }
 
-/* CARD */
+/* ===== CARD ===== */
 .card {
-  background: #0b1220;
-  border: 1px solid #1f2937;
+  background: rgba(11,18,32,0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 18px;
   padding: 36px;
   margin-bottom: 48px;
@@ -61,7 +67,7 @@ body {
   text-align: center;
 }
 
-/* CALC BLOCK */
+/* ===== CALC BLOCK ===== */
 .calc-block {
   margin-bottom: 36px;
 }
@@ -72,36 +78,56 @@ body {
   color: #f9fafb;
 }
 
-/* INPUTS */
+/* ===== INPUTS ===== */
 .fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 input {
   padding: 12px;
+
+  background: rgba(15,23,42,0.55);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
-  border: 1px solid #1f2937;
-  background: #0f172a;
+
   color: #e5e7eb;
+  font-size: 15px;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* RESULT */
+input::placeholder {
+  color: #6b7280;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.14);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.04),
+    0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* ===== RESULT ===== */
 .result {
-  font-size: 16px;
+  font-size: 15px;
   color: #9ca3af;
+  margin-top: 6px;
 }
 
 .result strong {
   display: block;
-  font-size: 36px;
-  color: #60a5fa;
   margin-top: 6px;
+  font-size: 34px;
+  color: #e5e7eb;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .site-footer {
   background: #0b1220;
   border-top: 1px solid #1f2937;
@@ -129,4 +155,19 @@ input {
   border: none;
   border-top: 1px solid #1f2937;
   margin-bottom: 22px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 26px;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
 }

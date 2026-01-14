@@ -1,9 +1,11 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== GLOBAL ===== */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
@@ -13,7 +15,7 @@ body {
   line-height: 1.7;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .site-header {
   background: #0b1220;
   padding: 56px 20px;
@@ -29,6 +31,9 @@ body {
 .site-subtitle {
   margin-top: 14px;
   color: #9ca3af;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .trust {
@@ -41,17 +46,18 @@ body {
   display: inline-block;
 }
 
-/* MAIN */
+/* ===== MAIN ===== */
 .main {
   max-width: 900px;
   margin: 64px auto;
   padding: 0 20px;
 }
 
-/* CARD */
+/* ===== CARD ===== */
 .card {
-  background: #0b1220;
-  border: 1px solid #1f2937;
+  background: rgba(11,18,32,0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 18px;
   padding: 36px;
   margin-bottom: 48px;
@@ -61,29 +67,41 @@ body {
   text-align: center;
 }
 
-/* COLOR PICKER */
+/* ===== COLOR PREVIEW ===== */
 .color-preview {
   width: 140px;
   height: 140px;
   border-radius: 14px;
-  margin: 0 auto 20px;
-  border: 1px solid #1f2937;
+  margin: 0 auto 22px;
+
+  background: rgba(15,23,42,0.55);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
+/* ===== COLOR INPUT ===== */
 input[type="color"] {
   width: 100%;
   max-width: 240px;
   height: 48px;
-  border: none;
-  margin-bottom: 24px;
+  margin: 0 auto 26px;
+
+  background: rgba(15,23,42,0.6);
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+
   cursor: pointer;
 }
 
+/* ===== VALUES ===== */
 .values {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .value-box label {
@@ -91,17 +109,24 @@ input[type="color"] {
   font-size: 13px;
   color: #9ca3af;
   margin-bottom: 6px;
+  text-align: left;
 }
 
 .value-box input {
   width: 100%;
-  padding: 10px;
-  background: #0f172a;
-  border: 1px solid #1f2937;
+  padding: 12px;
+
+  background: rgba(15,23,42,0.55);
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 10px;
+
   color: #e5e7eb;
+  font-size: 14px;
 }
 
+/* ===== COPY BUTTONS ===== */
 .copy-buttons {
   display: flex;
   justify-content: center;
@@ -110,18 +135,26 @@ input[type="color"] {
 
 .copy-buttons button {
   padding: 10px 18px;
+
+  background: rgba(15,23,42,0.6);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 10px;
-  border: 1px solid #1f2937;
-  background: #2563eb;
-  color: #fff;
+
+  color: #e5e7eb;
+  font-size: 14px;
   cursor: pointer;
+
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .copy-buttons button:hover {
-  background: #1d4ed8;
+  background: rgba(15,23,42,0.75);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .site-footer {
   background: #0b1220;
   border-top: 1px solid #1f2937;
@@ -145,4 +178,19 @@ input[type="color"] {
   border: none;
   border-top: 1px solid #1f2937;
   margin-bottom: 22px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 26px;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+  }
 }

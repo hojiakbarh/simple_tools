@@ -1,9 +1,11 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== GLOBAL ===== */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
@@ -50,8 +52,9 @@ body {
 
 /* ===== CARD ===== */
 .card {
-  background: #0b1220;
-  border: 1px solid #1f2937;
+  background: rgba(11,18,32,0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 18px;
   padding: 36px;
   margin-bottom: 48px;
@@ -72,16 +75,36 @@ body {
   display: block;
   margin-bottom: 6px;
   color: #9ca3af;
+  font-size: 14px;
 }
 
+/* ===== INPUT ===== */
 .field input {
   width: 100%;
   padding: 14px;
-  background: #0f172a;
-  border: 1px solid #1f2937;
+
+  background: rgba(15,23,42,0.55);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
+
   color: #e5e7eb;
   font-size: 16px;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input::placeholder {
+  color: #6b7280;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.14);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.04),
+    0 6px 18px rgba(0,0,0,0.35);
 }
 
 /* ===== BUTTON ===== */
@@ -89,12 +112,23 @@ body {
   width: 100%;
   margin-top: 22px;
   padding: 14px;
+
+  background: rgba(15,23,42,0.6);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 14px;
-  background: #2563eb;
-  border: none;
-  color: #fff;
+
+  color: #e5e7eb;
   font-size: 16px;
   cursor: pointer;
+
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: rgba(15,23,42,0.75);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.4);
 }
 
 /* ===== ERROR ===== */
@@ -110,9 +144,12 @@ body {
   display: none;
   margin-top: 28px;
   padding: 24px;
+
+  background: rgba(15,23,42,0.55);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
-  background: #0f172a;
-  border: 1px solid #1f2937;
 }
 
 .result-card span {
@@ -124,14 +161,16 @@ body {
   display: block;
   margin: 10px 0;
   font-size: 42px;
+  color: #e5e7eb;
 }
 
 .result-card p {
   font-size: 15px;
   font-weight: 500;
+  color: #d1d5db;
 }
 
-/* ===== SEO ===== */
+/* ===== SEO CONTENT ===== */
 .seo h2,
 .seo h3 {
   color: #f9fafb;
@@ -175,4 +214,15 @@ body {
 
 .site-footer p {
   margin-top: 18px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .site-title {
+    font-size: 30px;
+  }
 }
