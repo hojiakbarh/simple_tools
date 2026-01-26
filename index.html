@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO TITLE -->
-  <title>
-    Free Online Tools – Online Timer, Word Counter, BMI Calculator | OnHub
-  </title>
+  <title>Free Online Tools – Timer, Word Counter, BMI Calculator | OnHub</title>
 
   <!-- SEO DESCRIPTION -->
   <meta name="description"
-        content="OnHub provides free online tools including online timer, word counter, BMI calculator, percentage calculator, QR code generator, color picker and more. No registration. No tracking. 100% privacy-friendly." />
+        content="OnHub provides free online tools: online timer, word counter, BMI calculator, percentage calculator, QR generator, color picker and more. Fast, simple and privacy-friendly." />
 
   <!-- CANONICAL -->
   <link rel="canonical" href="https://onhub.site/" />
@@ -23,26 +21,26 @@
   <meta name="theme-color" content="#0b1220" />
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Free Online Tools – Online Timer, Word Counter, BMI Calculator | OnHub" />
-  <meta property="og:description" content="Fast, simple and privacy-friendly online tools. No registration, no tracking, and no personal data stored." />
+  <meta property="og:title" content="Free Online Tools – Timer, Word Counter, BMI Calculator | OnHub" />
+  <meta property="og:description" content="Fast, lightweight and privacy-friendly tools. No registration. Works on mobile and desktop." />
   <meta property="og:url" content="https://onhub.site/" />
   <meta property="og:type" content="website" />
 
   <!-- TWITTER -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Free Online Tools – OnHub" />
-  <meta name="twitter:description" content="Fast, simple and privacy-friendly online tools with no registration required." />
+  <meta name="twitter:title" content="OnHub – Free Online Tools" />
+  <meta name="twitter:description" content="Simple online tools for daily tasks. Fast, clean and privacy-friendly." />
 
   <!-- FAVICON -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
 
-      <!-- GOOGLE ADSENSE -->
-  <meta name="google-adsense-account" content="ca-pub-3051499633734124">
+  <!-- GOOGLE ADSENSE (keep even if not approved yet) -->
+  <meta name="google-adsense-account" content="ca-pub-3051499633734124" />
   <script async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3051499633734124"
-    crossorigin="anonymous"></script>
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3051499633734124"
+          crossorigin="anonymous"></script>
 
   <!-- STRUCTURED DATA (JSON-LD) -->
   <script type="application/ld+json">
@@ -52,389 +50,796 @@
     "name": "OnHub",
     "url": "https://onhub.site/",
     "description": "OnHub provides free online tools including online timer, word counter, BMI calculator and more. No registration and privacy-friendly.",
-    "inLanguage": "en"
+    "inLanguage": "en",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://onhub.site/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root{
+      --bg: #111827;
+      --card: #0b1220;
+      --card2: #0f172a;
+      --border: #1f2937;
+      --border2: rgba(255,255,255,0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #6366f1;
+      --accent2: #ec4899;
+      --green: rgba(16,185,129,0.14);
+      --greenText: #a7f3d0;
+      --shadow: 0 26px 70px rgba(0,0,0,0.35);
+      --radius: 22px;
     }
 
-    body {
+    body{
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
         radial-gradient(circle at top, rgba(255,255,255,0.04), transparent 60%),
-        #111827;
-      color: #e5e7eb;
+        radial-gradient(circle at 10% 0%, rgba(99,102,241,0.28), transparent 45%),
+        radial-gradient(circle at 90% 20%, rgba(236,72,153,0.22), transparent 55%),
+        var(--bg);
+      color: var(--text);
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    a{ text-decoration: none; color: inherit; }
+
+    .container{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 18px;
     }
 
-    /* ===== HEADER ===== */
-    header {
-      background: #0b1220;
-      border-bottom: 1px solid #1f2937;
-      padding: 64px 20px;
+    /* ===== TOP NAV ===== */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,18,32,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 0;
+    }
+
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+    }
+
+    .brand-badge{
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(99,102,241,0.14);
+      border: 1px solid rgba(99,102,241,0.35);
+    }
+
+    .navlinks{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(229,231,235,0.9);
+    }
+
+    .navlinks a{
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: 0.18s;
+    }
+
+    .navlinks a:hover{
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.08);
+    }
+
+    .nav-cta{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pill{
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      font-size: 13px;
+      color: rgba(229,231,235,0.9);
+      white-space: nowrap;
+    }
+
+    /* ===== HERO ===== */
+    .hero-wrap{
+      padding: 44px 0 18px;
+    }
+
+    .hero{
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .hero h1{
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0.2px;
+      color: #f9fafb;
+    }
+
+    .hero p{
+      margin-top: 12px;
+      max-width: 64ch;
+      color: rgba(229,231,235,0.82);
+      font-size: 16px;
+    }
+
+    .trust{
+      margin-top: 18px;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: var(--green);
+      color: var(--greenText);
+      border: 1px solid rgba(16,185,129,0.18);
+    }
+
+    .hero-card{
+      background: rgba(11,18,32,0.8);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .search-title{
+      font-weight: 900;
+      font-size: 14px;
+      color: rgba(249,250,251,0.95);
+      letter-spacing: 0.25px;
+    }
+
+    .search-sub{
+      margin-top: 4px;
+      color: rgba(156,163,175,0.95);
+      font-size: 13px;
+    }
+
+    .search-row{
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-row input{
+      flex: 1;
+      padding: 14px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.25);
+      color: #fff;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .btn{
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(99,102,241,0.95);
+      color: #fff;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn:hover{ filter: brightness(1.06); transform: translateY(-1px); }
+
+    .chips{
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 13px;
+      color: rgba(229,231,235,0.92);
+      transition: 0.18s;
+    }
+
+    .chip:hover{
+      background: rgba(255,255,255,0.09);
+      transform: translateY(-1px);
+    }
+
+    /* ===== AD SLOT (WIDE like Insta) ===== */
+    .ad-area{
+      margin-top: 10px;
+      background: rgba(11,18,32,0.8);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .ad-label{
+      font-size: 12px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: rgba(229,231,235,0.65);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .ad-slot{
+      width: 100%;
+      min-height: 110px;
+      border-radius: 16px;
+      border: 1px dashed rgba(255,255,255,0.20);
+      background: rgba(255,255,255,0.03);
+      display: grid;
+      place-items: center;
+      padding: 14px;
+      color: rgba(229,231,235,0.78);
+      font-size: 14px;
       text-align: center;
     }
 
-    header h1 {
-      font-size: 38px;
+    /* ===== SECTIONS ===== */
+    .section{
+      margin-top: 22px;
+      background: rgba(11,18,32,0.85);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      padding: 26px;
+    }
+
+    .section h2{
+      font-size: 22px;
       color: #f9fafb;
-      letter-spacing: 0.4px;
-    }
-
-    header p {
-      margin-top: 16px;
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 16px;
-      color: #9ca3af;
-    }
-
-    .trust {
-      margin-top: 24px;
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 999px;
-      font-size: 14px;
-      background: rgba(16,185,129,0.12);
-      color: #a7f3d0;
-    }
-
-    /* ===== MAIN ===== */
-    main {
-      max-width: 1200px;
-      margin: 72px auto;
-      padding: 0 20px;
-    }
-
-    /* ===== CARD ===== */
-    .section {
-      background: #0b1220;
-      border: 1px solid #1f2937;
-      border-radius: 20px;
-      padding: 40px;
-      margin-bottom: 64px;
-    }
-
-    .section h2 {
-      font-size: 26px;
-      color: #f9fafb;
-      margin-bottom: 28px;
+      margin-bottom: 14px;
     }
 
     /* ===== TOOLS GRID ===== */
-    .tools {
+    .tools{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
 
-    .tool {
-      background: #0f172a;
-      border: 1px solid #1f2937;
-      border-radius: 16px;
-      padding: 26px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+    .tool{
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      padding: 18px;
+      transition: transform 0.18s, background 0.18s, border-color 0.18s;
+      min-height: 120px;
     }
 
-    .tool:hover {
-      transform: translateY(-4px);
-      border-color: #374151;
+    .tool:hover{
+      transform: translateY(-2px);
+      background: rgba(15,23,42,0.98);
+      border-color: rgba(255,255,255,0.16);
     }
 
-    .tool .icon {
-      font-size: 26px;
-      margin-bottom: 12px;
-      color: #9ca3af;
+    .tool-top{
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .tool h3 {
+    .tool-ico{
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(99,102,241,0.12);
+      border: 1px solid rgba(99,102,241,0.28);
+      font-size: 18px;
+    }
+
+    .tool h3{
       font-size: 16px;
       color: #f3f4f6;
-      margin-bottom: 6px;
+      margin-bottom: 2px;
+      font-weight: 850;
     }
 
-    .tool p {
-      font-size: 14px;
-      color: #9ca3af;
+    .tool p{
+      font-size: 13px;
+      color: rgba(156,163,175,0.95);
+      margin-top: 10px;
+      max-width: 52ch;
     }
 
-    /* ===== WHY ===== */
-    .why p {
-      max-width: 820px;
-      margin-bottom: 14px;
-      color: #9ca3af;
+    .tool small{
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 800;
+      color: rgba(229,231,235,0.9);
+      opacity: 0.9;
     }
 
-    .why ul {
-      margin-top: 16px;
-      margin-left: 20px;
-      color: #9ca3af;
+    /* ===== CONTENT ===== */
+    .content p{
+      color: rgba(156,163,175,0.95);
+      margin-top: 10px;
+      max-width: 96ch;
     }
 
-    .why li {
-      margin-bottom: 6px;
+    .content ul{
+      margin-top: 10px;
+      margin-left: 18px;
+      color: rgba(156,163,175,0.95);
     }
+
+    .content li{ margin-bottom: 6px; }
 
     /* ===== FAQ ===== */
-    .faq p {
-      color: #9ca3af;
+    .faq p{
+      color: rgba(156,163,175,0.95);
       margin-bottom: 12px;
-      max-width: 900px;
+      max-width: 96ch;
     }
 
-    .faq details {
-      border: 1px solid #1f2937;
-      border-radius: 14px;
-      background: #0f172a;
+    details{
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      background: rgba(15,23,42,0.85);
       padding: 14px 16px;
       margin-bottom: 12px;
     }
 
-    .faq summary {
+    summary{
       cursor: pointer;
-      font-weight: 600;
+      font-weight: 800;
       color: #f3f4f6;
       list-style: none;
     }
 
-    .faq summary::-webkit-details-marker {
-      display: none;
-    }
+    summary::-webkit-details-marker{ display: none; }
 
-    .faq details p {
+    details p{
       margin-top: 10px;
-      color: #9ca3af;
+      color: rgba(156,163,175,0.95);
       font-size: 14px;
     }
 
     /* ===== FOOTER ===== */
-    footer {
-      background: #0b1220;
-      border-top: 1px solid #1f2937;
-      padding: 48px 20px;
+    footer{
+      margin-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 26px 0 36px;
+      color: rgba(156,163,175,0.95);
       text-align: center;
       font-size: 14px;
-      color: #9ca3af;
     }
 
-    footer a {
-      margin: 0 12px;
-      color: #9ca3af;
+    footer a{
+      margin: 0 10px;
+      color: rgba(156,163,175,0.95);
     }
 
-    footer a:hover {
-      color: #e5e7eb;
+    footer a:hover{
+      color: rgba(229,231,235,1);
       text-decoration: underline;
     }
 
-    footer hr {
-      border: none;
-      border-top: 1px solid #1f2937;
-      margin-bottom: 22px;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 940px){
+      .hero{ grid-template-columns: 1fr; }
+      .tools{ grid-template-columns: 1fr; }
+      .nav-cta{ display: none; }
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 30px;
-      }
+    @media (max-width: 520px){
+      .search-row{ flex-direction: column; }
+      .btn{ width: 100%; }
+      .hero-card, .ad-area{ padding: 14px; }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Free Online Tools by OnHub</h1>
-  <p>
-    Fast, simple and privacy-friendly online tools.
-    No registration, no tracking, and no personal data stored.
-  </p>
-  <div class="trust">🔒 100% client-side · Privacy-first</div>
-</header>
+  <!-- TOP NAV -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
 
-<main>
+        <div class="brand">
+          <div class="brand-badge">⚡</div>
+          <div>OnHub</div>
+        </div>
 
-  <!-- TOOLS -->
-  <section class="section">
-    <h2>Available Online Tools</h2>
+        <div class="navlinks">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy-policy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
 
-    <div class="tools">
-      <a href="/online-timer/" class="tool">
-        <div class="icon">⏱</div>
-        <h3>Online Timer</h3>
-        <p>Free countdown timer in your browser</p>
-      </a>
+        <div class="nav-cta">
+          <div class="pill">🔒 No login</div>
+          <div class="pill">⚡ Fast tools</div>
+        </div>
 
-      <a href="/word-counter/" class="tool">
-        <div class="icon">✍️</div>
-        <h3>Word Counter</h3>
-        <p>Count words and characters instantly</p>
-      </a>
+      </div>
+    </div>
+  </div>
 
-      <a href="/bmi-calculator/" class="tool">
-        <div class="icon">⚖️</div>
-        <h3>BMI Calculator</h3>
-        <p>Calculate your body mass index</p>
-      </a>
+  <!-- HERO -->
+  <div class="hero-wrap">
+    <div class="container">
 
-      <a href="/percentage-calculator/" class="tool">
-        <div class="icon">📊</div>
-        <h3>Percentage Calculator</h3>
-        <p>Fast and accurate percentage math</p>
-      </a>
+      <div class="hero">
 
-      <a href="/password-generator/" class="tool">
-        <div class="icon">🔐</div>
-        <h3>Password Generator</h3>
-        <p>Create strong secure passwords</p>
-      </a>
+        <div>
+          <h1>Free Online Tools for Daily Work</h1>
+          <p>
+            OnHub is a clean collection of free online tools: calculators, generators and converters.
+            Built for speed, privacy and mobile usability — no registration required.
+          </p>
 
-      <a href="/qr-code-generator/" class="tool">
-        <div class="icon">🔳</div>
-        <h3>QR Code Generator</h3>
-        <p>Generate QR codes instantly</p>
-      </a>
+          <div class="trust">✅ 100% privacy-first · Works on mobile · Fast load</div>
 
-      <a href="/unit-converter/" class="tool">
-        <div class="icon">📐</div>
-        <h3>Unit Converter</h3>
-        <p>Convert units quickly and easily</p>
-      </a>
+          <div class="section hero-card" style="margin-top:18px;">
+            <div class="search-title">Search tools instantly</div>
+            <div class="search-sub">Type a tool name (example: timer, BMI, word counter…)</div>
 
-      <a href="/text-case-converter/" class="tool">
-        <div class="icon">🔤</div>
-        <h3>Text Case Converter</h3>
-        <p>Uppercase, lowercase and more</p>
-      </a>
+            <div class="search-row">
+              <input id="toolSearch" type="text" placeholder="Enter tool name..." />
+              <button class="btn" id="searchBtn">Search</button>
+            </div>
 
-      <a href="/color-picker/" class="tool">
-        <div class="icon">🎨</div>
-        <h3>Color Picker</h3>
-        <p>Pick and convert colors easily</p>
-      </a>
+            <div class="chips">
+              <a class="chip" href="/online-timer/">⏱ Timer</a>
+              <a class="chip" href="/word-counter/">✍️ Word Counter</a>
+              <a class="chip" href="/bmi-calculator/">⚖️ BMI</a>
+              <a class="chip" href="/qr-code-generator/">🔳 QR Code</a>
+              <a class="chip" href="/random-number/">🎲 Random</a>
+            </div>
+          </div>
+        </div>
 
-      <a href="/random-number/" class="tool">
-        <div class="icon">🎲</div>
-        <h3>Random Number Generator</h3>
-        <p>Generate random numbers instantly</p>
-      </a>
+        <!-- RIGHT: AD SLOT like InstaSaver, but OnHub style -->
+        <div class="ad-area">
+          <div class="ad-label">Advertising</div>
 
-      <a href="/age-calculator/" class="tool">
-        <div class="icon">🎂</div>
-        <h3>Age Calculator</h3>
-        <p>Calculate your age</p>
-      </a>
+          <!-- ✅ AdSense approved bo‘lsa shu joyga ad code qo‘yiladi -->
+          <div class="ad-slot" id="ad-slot-top">
+            Wide Banner Ad Slot (Responsive)
+            <br />
+            <span style="opacity:.7;">Recommended: 728×90 / 320×100</span>
+          </div>
+        </div>
 
-      <a href="/image-compressor/" class="tool">
-        <div class="icon">🖼️</div>
-        <h3>Image Compressor</h3>
-        <p>Compress images online</p>
-      </a>
+      </div>
 
-      <a href="/weather/" class="tool">
-        <div class="icon">🌦</div>
-        <h3>Weather</h3>
-        <p>Check current weather</p>
-      </a>
+      <!-- TOOLS -->
+      <section class="section" id="tools">
+        <h2>Available Online Tools</h2>
 
-      <a href="/whatsapp-link/" class="tool">
-        <div class="icon">💬</div>
-        <h3>WhatsApp Link</h3>
-        <p>Create chat links</p>
-      </a>
+        <div class="tools" id="toolsGrid">
 
-      <a href="/youtube-thumbnail/" class="tool">
-        <div class="icon">▶️</div>
-        <h3>YouTube Thumbnail</h3>
-        <p>Preview thumbnails</p>
-      </a>
+          <a href="/online-timer/" class="tool" data-name="online timer countdown timer">
+            <div class="tool-top">
+              <div class="tool-ico">⏱</div>
+              <div>
+                <h3>Online Timer</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Free countdown timer that runs inside your browser. Perfect for studying, workouts and tasks.</p>
+          </a>
+
+          <a href="/word-counter/" class="tool" data-name="word counter character counter text">
+            <div class="tool-top">
+              <div class="tool-ico">✍️</div>
+              <div>
+                <h3>Word Counter</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Count words and characters instantly. Useful for writers, students, SEO content and social posts.</p>
+          </a>
+
+          <a href="/bmi-calculator/" class="tool" data-name="bmi calculator body mass index">
+            <div class="tool-top">
+              <div class="tool-ico">⚖️</div>
+              <div>
+                <h3>BMI Calculator</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Calculate your BMI in seconds and understand common BMI categories. Informational tool only.</p>
+          </a>
+
+          <a href="/percentage-calculator/" class="tool" data-name="percentage calculator percent increase decrease">
+            <div class="tool-top">
+              <div class="tool-ico">📊</div>
+              <div>
+                <h3>Percentage Calculator</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Fast percentage math: X% of Y, percent change, increase and decrease calculations.</p>
+          </a>
+
+          <a href="/password-generator/" class="tool" data-name="password generator strong secure password">
+            <div class="tool-top">
+              <div class="tool-ico">🔐</div>
+              <div>
+                <h3>Password Generator</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Create strong and secure passwords instantly. Safer accounts start with better passwords.</p>
+          </a>
+
+          <a href="/qr-code-generator/" class="tool" data-name="qr code generator create qr">
+            <div class="tool-top">
+              <div class="tool-ico">🔳</div>
+              <div>
+                <h3>QR Code Generator</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Generate QR codes for links or text. Great for sharing websites, Wi-Fi, menus and events.</p>
+          </a>
+
+          <a href="/unit-converter/" class="tool" data-name="unit converter length weight temperature">
+            <div class="tool-top">
+              <div class="tool-ico">📐</div>
+              <div>
+                <h3>Unit Converter</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Convert units quickly: length, weight and more. Simple and fast conversion without apps.</p>
+          </a>
+
+          <a href="/text-case-converter/" class="tool" data-name="text case converter uppercase lowercase title case">
+            <div class="tool-top">
+              <div class="tool-ico">🔤</div>
+              <div>
+                <h3>Text Case Converter</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Convert text to uppercase, lowercase, sentence case and more. Works instantly on any device.</p>
+          </a>
+
+          <a href="/color-picker/" class="tool" data-name="color picker hex rgb hsl">
+            <div class="tool-top">
+              <div class="tool-ico">🎨</div>
+              <div>
+                <h3>Color Picker</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Pick and convert colors easily. Copy HEX, RGB values fast for design and development.</p>
+          </a>
+
+          <a href="/random-number/" class="tool" data-name="random number generator rand">
+            <div class="tool-top">
+              <div class="tool-ico">🎲</div>
+              <div>
+                <h3>Random Number Generator</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Generate random numbers for games, choices, testing and daily tasks.</p>
+          </a>
+
+          <a href="/age-calculator/" class="tool" data-name="age calculator birthday">
+            <div class="tool-top">
+              <div class="tool-ico">🎂</div>
+              <div>
+                <h3>Age Calculator</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Calculate age in years, months and days. Great for documents and planning.</p>
+          </a>
+
+          <a href="/image-compressor/" class="tool" data-name="image compressor compress jpg png">
+            <div class="tool-top">
+              <div class="tool-ico">🖼️</div>
+              <div>
+                <h3>Image Compressor</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Compress images quickly to reduce file size. Useful for websites and social sharing.</p>
+          </a>
+
+          <a href="/weather/" class="tool" data-name="weather forecast">
+            <div class="tool-top">
+              <div class="tool-ico">🌦</div>
+              <div>
+                <h3>Weather</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Check weather quickly and plan your day. Designed for fast loading on mobile.</p>
+          </a>
+
+          <a href="/whatsapp-link/" class="tool" data-name="whatsapp link generator wa link">
+            <div class="tool-top">
+              <div class="tool-ico">💬</div>
+              <div>
+                <h3>WhatsApp Link</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Create WhatsApp chat links easily and share them for business or personal use.</p>
+          </a>
+
+          <a href="/youtube-thumbnail/" class="tool" data-name="youtube thumbnail preview">
+            <div class="tool-top">
+              <div class="tool-ico">▶️</div>
+              <div>
+                <h3>YouTube Thumbnail</h3>
+                <small>Open →</small>
+              </div>
+            </div>
+            <p>Preview YouTube thumbnails quickly. Useful for creators and video editors.</p>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="section content">
+        <h2>Why OnHub Works Better Than Heavy Tool Sites</h2>
+
+        <p>
+          Many “online tools” websites look simple, but they are heavy and slow.
+          OnHub is built differently: lightweight pages, consistent UI, and fast performance.
+          We focus on the user experience — open a tool, get results, and move on.
+        </p>
+
+        <p>
+          Most tools on OnHub run directly in your browser (client-side),
+          which helps keep your data private. You do not need to create an account,
+          and we avoid unnecessary tracking or confusing steps.
+        </p>
+
+        <ul>
+          <li><b>Fast loading</b> even on slow connections</li>
+          <li><b>Mobile-friendly</b> UI for phones and tablets</li>
+          <li><b>Clean design</b> without distractions</li>
+          <li><b>Simple navigation</b> and consistent layout</li>
+          <li><b>Free to use</b> for daily tasks and productivity</li>
+        </ul>
+
+        <p>
+          If you want more tools added, check the About page and send a message via Contact.
+          We continuously improve OnHub with new features and new utilities.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <p>
+          OnHub is a collection of free online tools designed to help you solve daily tasks faster.
+          Below are answers to common questions about usage, privacy, and supported devices.
+        </p>
+
+        <details>
+          <summary>Is OnHub completely free?</summary>
+          <p>Yes. All tools on OnHub are free and work without registration.</p>
+        </details>
+
+        <details>
+          <summary>Do you store any data?</summary>
+          <p>No. Most tools run in your browser, so your input is not stored on our servers.</p>
+        </details>
+
+        <details>
+          <summary>Can I use OnHub on mobile?</summary>
+          <p>Yes. The website is responsive and works smoothly on phones, tablets, and desktops.</p>
+        </details>
+
+        <details>
+          <summary>Why does OnHub load faster than many other tool sites?</summary>
+          <p>Because we avoid heavy frameworks and keep our pages optimized and lightweight.</p>
+        </details>
+
+        <details>
+          <summary>Which tools are most popular?</summary>
+          <p>Online Timer, Word Counter, BMI Calculator, Password Generator, and QR Code Generator are top tools.</p>
+        </details>
+
+        <details>
+          <summary>Can I suggest a new tool?</summary>
+          <p>Yes. You can contact us via the Contact page and share your suggestion.</p>
+        </details>
+      </section>
 
     </div>
-  </section>
+  </div>
 
-  <!-- WHY -->
-  <section class="section why">
-    <h2>Why OnHub Simple Tools?</h2>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div style="opacity: 0.95;">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/contact.html">Contact</a>
+      </div>
 
-    <p>
-      OnHub Simple Tools is built to be clean, fast and distraction-free.
-      Every tool works instantly without unnecessary buttons or steps.
-    </p>
+      <div style="margin-top: 14px;">
+        © <span id="year"></span> OnHub – Simple Tools. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
-    <p>
-      All tools run directly in your browser — your data never leaves your device.
-    </p>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    <ul>
-      <li>✔ Free online tools</li>
-      <li>✔ No registration required</li>
-      <li>✔ No personal data stored</li>
-      <li>✔ Consistent UI & UX across all tools</li>
-    </ul>
+    const searchInput = document.getElementById("toolSearch");
+    const searchBtn = document.getElementById("searchBtn");
+    const cards = Array.from(document.querySelectorAll(".tool"));
 
-    <p style="margin-top:18px;">
-      If you are looking for fast utilities that work instantly, OnHub is made for you.
-      Our goal is to keep everything lightweight, safe, and easy to use — without distractions.
-    </p>
-  </section>
+    function filterTools() {
+      const q = (searchInput.value || "").toLowerCase().trim();
+      const toolsSection = document.getElementById("tools");
+      if (toolsSection) toolsSection.scrollIntoView({ behavior: "smooth" });
 
-  <!-- FAQ (AdSense-friendly content) -->
-  <section class="section faq">
-    <h2>Frequently Asked Questions</h2>
+      cards.forEach(card => {
+        const name = (card.getAttribute("data-name") || "").toLowerCase();
+        card.style.display = name.includes(q) ? "block" : "none";
+      });
+    }
 
-    <p>
-      OnHub is a collection of simple online tools designed to work instantly inside your browser.
-      Below are quick answers to common questions.
-    </p>
-
-    <details>
-      <summary>Is OnHub completely free?</summary>
-      <p>Yes. All tools on OnHub are free to use and work without any registration.</p>
-    </details>
-
-    <details>
-      <summary>Do you store user data or track activity?</summary>
-      <p>No. OnHub tools run client-side in your browser, meaning your input stays on your device.</p>
-    </details>
-
-    <details>
-      <summary>Can I use OnHub tools on mobile?</summary>
-      <p>Yes. The website is responsive and works smoothly on both desktop and mobile devices.</p>
-    </details>
-
-    <details>
-      <summary>Why does OnHub feel faster than other tool sites?</summary>
-      <p>Because we focus on minimal UI, optimized code, and fast loading without heavy frameworks.</p>
-    </details>
-
-    <details>
-      <summary>Which tools are most popular?</summary>
-      <p>The most used tools include Word Counter, Online Timer, Password Generator, and BMI Calculator.</p>
-    </details>
-  </section>
-
-</main>
-
-<footer>
-  <hr>
-  <a href="/">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/privacy-policy.html">Privacy Policy</a>
-  <a href="/terms.html">Terms</a>
-  <a href="/contact.html">Contact</a>
-  <p style="margin-top:18px;">© OnHub – Simple Tools. All rights reserved.</p>
-</footer>
+    searchBtn.addEventListener("click", filterTools);
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") filterTools();
+    });
+  </script>
 
 </body>
 </html>
